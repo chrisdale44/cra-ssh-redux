@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import Loadable from "react-loadable";
 
 import serverRenderer from "./middleware/renderer";
 
@@ -15,10 +16,12 @@ router.use(
 
 app.use(router);
 
-app.listen(PORT, error => {
-  if (error) {
-    return console.log("something bad happened", error);
-  }
+Loadable.preloadAll().then(() => {
+  app.listen(PORT, error => {
+    if (error) {
+      return console.log("something bad happened", error);
+    }
 
-  console.log("Server listening on " + PORT + "...");
+    console.log("Server listening on " + PORT + "...");
+  });
 });
