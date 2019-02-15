@@ -15,7 +15,9 @@ const actionIndex = (req, res, next) => {
 router.use("^/$", actionIndex);
 
 router.use(
-  express.static(path.resolve(__dirname, "..", "build"), { maxAge: "30d" })
+  express.static(path.resolve(__dirname, "..", "..", "build"), {
+    maxAge: "30d"
+  })
 );
 
 export default router;
