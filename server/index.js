@@ -1,20 +1,11 @@
 import express from "express";
-import path from "path";
 import Loadable from "react-loadable";
+import indexController from "./controllers";
 
-import serverRenderer from "./middleware/renderer";
-
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 3000;
 const app = express();
-const router = express.Router();
 
-router.use("*", serverRenderer);
-
-router.use(
-  express.static(path.resolve(__dirname, "..", "build"), { maxAge: "30d" })
-);
-
-app.use(router);
+app.use(indexController);
 
 Loadable.preloadAll().then(() => {
   app.listen(PORT, error => {
