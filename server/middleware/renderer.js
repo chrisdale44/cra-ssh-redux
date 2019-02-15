@@ -29,20 +29,10 @@ export default store => (req, res, next) => {
 
     const reduxState = JSON.stringify(store.getState());
 
-    const extractAssets = (assets, chunks) => {
-      const res = Object.keys(assets)
-        .filter(asset => {
-          const y = asset.replace(".js", "");
-          const x = chunks.indexOf(y) > -1;
-          console.log("yx", y, x);
-          return x;
-        })
+    const extractAssets = (assets, chunks) =>
+      Object.keys(assets)
+        .filter(asset => chunks.indexOf(asset.replace(".js", "")) > -1)
         .map(k => assets[k]);
-      console.log("assets", assets);
-      console.log("chunks", chunks);
-      console.log("res", res);
-      return res;
-    };
 
     const extraChunks = extractAssets(manifest, modules).map(
       c => `<script type="text/javascript" src="${c}"></script>`
