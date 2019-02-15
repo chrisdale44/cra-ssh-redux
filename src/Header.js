@@ -5,9 +5,9 @@ import { setMessage } from "./store/appReducer";
 
 class Header extends Component {
   componentDidMount() {
-    if (!this.props.message) {
-      this.props.updateMessage("Hi, I'm from client!");
-    }
+    // if (!this.props.message) {
+    this.props.updateMessage("Hi, I'm from client!");
+    // }
   }
   render() {
     return (
