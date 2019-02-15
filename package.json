@@ -13,7 +13,7 @@
     "redux-thunk": "^2.3.0"
   },
   "scripts": {
-    "start": "yarn build && npm run start-server",
+    "start": "yarn build && yarn start-server",
     "start-client": "react-scripts start",
     "start-server": "node server/bootstrap.js",
     "build": "react-scripts build",
