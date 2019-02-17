@@ -1,14 +1,20 @@
 import { createStore, combineReducers, applyMiddleware } from "redux";
 import { composeWithDevTools } from "redux-devtools-extension";
 import ReduxThunk from "redux-thunk";
-import { appReducer } from "./appReducer";
+import photosReducer from "./photos";
+import tagsReducer from "./tags";
+import filtersReducer from "./filters";
+import metadataReducer from "./metadata";
 
 const createStoreWithMiddleware = composeWithDevTools(
   applyMiddleware(ReduxThunk)
 )(createStore);
 
 const rootReducer = combineReducers({
-  app: appReducer
+  photos: photosReducer,
+  tags: tagsReducer,
+  filters: filtersReducer,
+  metadata: metadataReducer
 });
 
 export default function configureStore(initialState = {}) {

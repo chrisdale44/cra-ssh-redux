@@ -2,17 +2,22 @@ import express from "express";
 import path from "path";
 import serverRenderer from "../middleware/renderer";
 import configureStore from "../../src/store/configureStore";
-import { setMessage } from "../../src/store/appReducer";
-import fetchAllPhotos from "../api/fetchAllPhotos";
+import { fetchAllPhotos } from "../../src/store/photos";
 
 const router = express.Router();
+const {
+  API_KEY,
+  API_SECRET,
+  CLOUD_NAME,
+  CLOUD_BASE,
+  PHOTOS_PATH,
+  MAX_RESULTS
+} = process.env;
+const API_URL = `https://${API_KEY}:${API_SECRET}@${CLOUD_BASE}${CLOUD_NAME}${PHOTOS_PATH}?max_results=${MAX_RESULTS}`;
 
 const actionIndex = (req, res, next) => {
-  fetchAllPhotos().then(result => {
-    console.log("result", result);
-    const preloadedState = { result };
-    const store = configureStore(preloadedState);
-    store.dispatch(setMessage("Hi, I'm from server! Test"));
+  const store = configureStore();
+  store.dispatch(fetchAllPhotos(API_URL)).then(() => {
     serverRenderer(store)(req, res, next);
   });
 };

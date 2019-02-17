@@ -1,44 +1,43 @@
-import {
-  FETCH_PHOTOS_BEGIN,
-  FETCH_PHOTOS_SUCCESS,
-  FETCH_PHOTOS_FAILURE
-} from "./constants";
-import { API_BASE, GET_ALL_PHOTOS } from "../../api/constants";
+import axios from "axios";
+import { FETCH_PHOTOS_SUCCESS } from "./constants";
 
-export const fetchPhotos = () => dispatch => {
-  dispatch({
-    type: FETCH_PHOTOS_BEGIN
+export const fetchAllPhotos = url => dispatch => {
+  return new Promise((resolve, reject) => {
+    let photos = [];
+    const fetchPhotos = url =>
+      axios
+        .get(url)
+        .then(handleErrors)
+        .then(({ data }) => {
+          photos = photos.concat(data.resources);
+          if (data.next_cursor) {
+            const urlParams = new URLSearchParams(url);
+            urlParams.set("next_cursor", data.next_cursor);
+            fetchPhotos(decodeURIComponent(urlParams.toString()));
+          } else {
+            dispatch(fetchPhotosSuccess(photos));
+            resolve(photos);
+          }
+        })
+        .catch(error => {
+          console.log("Failed to fetch photos", error);
+          reject(error);
+        });
+
+    fetchPhotos(url);
   });
-  return fetch(API_BASE + GET_ALL_PHOTOS)
-    .then(handleErrors)
-    .then(res => res.json())
-    .then(json => {
-      dispatch(fetchPhotosSuccess(json.photos));
-      return json.photos;
-    })
-    .catch(error => {
-      console.log("fail", error);
-      dispatch(fetchPhotosFailure(error));
-    });
 };
 
-function handleErrors(response) {
-  if (!response.ok) {
-    throw Error(response.statusText);
+const handleErrors = response => {
+  if (!responseOk(response.status)) {
+    throw Error(`${response.status}: ${response.statusText}`);
   }
   return response;
-}
+};
 
-export const fetchProductsBegin = () => ({
-  type: FETCH_PHOTOS_BEGIN
-});
+const responseOk = n => (n >= 200 && n < 300 ? true : false);
 
-export const fetchPhotosSuccess = photos => ({
+const fetchPhotosSuccess = photos => ({
   type: FETCH_PHOTOS_SUCCESS,
   payload: { photos }
-});
-
-export const fetchPhotosFailure = error => ({
-  type: FETCH_PHOTOS_FAILURE,
-  payload: { error }
 });

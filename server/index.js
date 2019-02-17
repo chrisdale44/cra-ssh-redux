@@ -10,7 +10,7 @@ app.use(indexController);
 Loadable.preloadAll().then(() => {
   app.listen(PORT, error => {
     if (error) {
-      return console.log("something bad happened", error);
+      return console.log("Something bad happened", error);
     }
 
     console.log("Server listening on " + PORT + "...");
