@@ -2,30 +2,28 @@ import axios from "axios";
 import { FETCH_PHOTOS_SUCCESS } from "./constants";
 
 export const fetchAllPhotos = url => dispatch => {
-  return new Promise((resolve, reject) => {
-    let photos = [];
-    const fetchPhotos = url =>
-      axios
-        .get(url)
-        .then(handleErrors)
-        .then(({ data }) => {
-          photos = photos.concat(data.resources);
-          if (data.next_cursor) {
-            const urlParams = new URLSearchParams(url);
-            urlParams.set("next_cursor", data.next_cursor);
-            fetchPhotos(decodeURIComponent(urlParams.toString()));
-          } else {
-            dispatch(fetchPhotosSuccess(photos));
-            resolve(photos);
-          }
-        })
-        .catch(error => {
-          console.log("Failed to fetch photos", error);
-          reject(error);
-        });
+  let photos = [];
 
-    fetchPhotos(url);
-  });
+  const fetchPhotos = url =>
+    axios
+      .get(url)
+      .then(handleErrors)
+      .then(({ data }) => {
+        photos = photos.concat(data.resources);
+        if (data.next_cursor) {
+          const urlParams = new URLSearchParams(url);
+          urlParams.set("next_cursor", data.next_cursor);
+          return fetchPhotos(decodeURIComponent(urlParams.toString()));
+        } else {
+          dispatch(fetchPhotosSuccess(photos));
+          return photos;
+        }
+      })
+      .catch(error => {
+        console.log("Failed to fetch photos", error);
+      });
+
+  return fetchPhotos(url);
 };
 
 const handleErrors = response => {

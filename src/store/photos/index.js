@@ -18,7 +18,6 @@ const initialState = {
 export default (state = initialState, action) => {
   switch (action.type) {
     case FETCH_PHOTOS_SUCCESS:
-      console.log(FETCH_PHOTOS_SUCCESS);
       return {
         ...state,
         photos: action.payload.photos
