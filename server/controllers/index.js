@@ -13,7 +13,7 @@ const {
   PHOTOS_PATH,
   MAX_RESULTS
 } = process.env;
-const API_URL = `https://${API_KEY}:${API_SECRET}@${CLOUD_BASE}${CLOUD_NAME}${PHOTOS_PATH}?max_results=${MAX_RESULTS}`;
+const API_URL = `https://${API_KEY}:${API_SECRET}@${CLOUD_BASE}${CLOUD_NAME}${PHOTOS_PATH}?max_results=${MAX_RESULTS}&tags=true&context=true`;
 
 const actionIndex = (req, res, next) => {
   const store = configureStore();

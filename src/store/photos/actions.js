@@ -2,6 +2,7 @@ import axios from "axios";
 import { FETCH_PHOTOS_SUCCESS } from "./constants";
 
 export const fetchAllPhotos = url => dispatch => {
+  console.log("Fetch: ", url);
   let photos = [];
 
   const fetchPhotos = url =>

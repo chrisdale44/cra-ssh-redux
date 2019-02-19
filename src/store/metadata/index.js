@@ -1,6 +1,6 @@
 // import { FETCH_PHOTOS_SUCCESS } from "../photos/constants";
 // import { parseForMetadata } from "../../helpers";
-// export { METADATA_IDS } from "./constants";
+export { METADATA_IDS } from "./constants";
 export { getAllMetadata } from "./selectors";
 
 const initialState = {};
