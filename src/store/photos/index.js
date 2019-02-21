@@ -1,13 +1,13 @@
 import { FETCH_PHOTOS_SUCCESS } from "./constants";
 
-// export {
-//   getAllPhotos,
-//   getPhoto,
-//   getPhotoTags,
-//   getPhotoAlbum,
-//   getPhotoMedium,
-//   getPhotoSubject
-// } from "./selectors";
+export {
+  getAllPhotos,
+  getPhoto,
+  getPhotoTags,
+  getPhotoAlbum,
+  getPhotoMedium,
+  getPhotoSubject
+} from "./selectors";
 export { fetchAllPhotos } from "./actions";
 
 const initialState = {

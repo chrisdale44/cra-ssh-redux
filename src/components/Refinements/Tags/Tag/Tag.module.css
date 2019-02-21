@@ -1,0 +1,29 @@
+@import "../../../styles/colors.css";
+
+.button {
+  display: inline-block;
+  border: 1px solid var(--dark-grey);
+  padding: 6px 10px;
+  margin: 6px;
+  background-color: transparent;
+  color: black;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: var(--dark-grey);
+  border-color: var(--dark-grey);
+  color: white;
+}
+
+.button:disabled {
+  color: white;
+  border-color: white;
+}
+
+.button.isSelected {
+  color: white;
+  background-color: teal;
+  border-color: teal;
+}

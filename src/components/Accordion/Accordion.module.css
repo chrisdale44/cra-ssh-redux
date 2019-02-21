@@ -1,0 +1,57 @@
+@import "../styles/colors.css";
+
+.wrapper {
+  position: relative;
+  min-height: auto;
+  margin: 15px 30px;
+  text-align: left;
+}
+
+.accordion {
+  position: relative;
+  display: block;
+  overflow: hidden;
+  height: auto;
+  max-height: 0px;
+  transition: max-height 0.2s ease;
+  z-index: 1;
+}
+
+.label {
+  color: var(--dark-grey);
+  font-size: 1em;
+  cursor: pointer;
+  text-align: left;
+}
+
+.label:hover {
+  color: var(--dark-grey);
+}
+
+.accordion.open {
+  max-height: 200px;
+}
+
+.icon {
+  position: relative;
+  margin-left: 5px;
+}
+
+.icon:hover {
+  color: var(--dark-grey);
+}
+
+/* .icon::before {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid var(--light-grey);
+    height: 1em;
+    width: 1em;
+    top: 2px;
+    left: -5px;
+} */
+
+.label:hover .icon::before {
+  /* border: 2px solid var(--medium-grey); */
+}

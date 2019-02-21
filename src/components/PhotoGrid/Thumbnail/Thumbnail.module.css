@@ -1,0 +1,26 @@
+.wrapper {
+  background-color: #ccc;
+  margin-bottom: 30px;
+}
+
+img {
+  display: block;
+  object-fit: contain;
+  width: 100%;
+}
+
+.squareCrop {
+  overflow: hidden;
+}
+
+.squareCrop img {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.squareBorder img {
+  object-fit: contain;
+  height: 100%;
+  width: 100%;
+}

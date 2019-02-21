@@ -3,9 +3,10 @@ import Loadable from "react-loadable";
 import "./App.css";
 
 const AsyncComponent = Loadable({
-  loader: () => import(/* webpackChunkName: "header" */ "./Header"),
+  loader: () =>
+    import(/* webpackChunkName: "photography" */ "./pages/Photography"),
   loading: () => <div>loading...</div>,
-  modules: ["header"]
+  modules: ["photography"]
 });
 
 class App extends Component {

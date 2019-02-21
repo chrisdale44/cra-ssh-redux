@@ -1,0 +1,13 @@
+.header {
+  position: relative;
+  display: block;
+  background-color: #101010;
+  color: white;
+  text-align: left;
+}
+
+.header h1 {
+  margin: 0px 30px;
+  padding: 10px 0;
+  text-transform: capitalize;
+}

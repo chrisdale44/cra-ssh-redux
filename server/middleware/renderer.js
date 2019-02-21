@@ -29,19 +29,19 @@ export default store => (req, res, next) => {
 
     const reduxState = JSON.stringify(store.getState());
 
-    const extractAssets = (assets, chunks) =>
+    const getBundles = (assets, chunks) =>
       Object.keys(assets)
         .filter(asset => chunks.indexOf(asset.replace(".js", "")) > -1)
         .map(k => assets[k]);
 
-    const extraChunks = extractAssets(manifest, modules).map(
+    const bundles = getBundles(manifest, modules).map(
       c => `<script type="text/javascript" src="${c}"></script>`
     );
 
     return res.send(
       htmlData
         .replace('<div id="root"></div>', `<div id="root">${html}</div>`)
-        .replace("</body>", extraChunks.join("") + "</body>")
+        .replace("</body>", bundles.join("") + "</body>")
         .replace('"__SERVER_REDUX_STATE__"', reduxState)
     );
   });
