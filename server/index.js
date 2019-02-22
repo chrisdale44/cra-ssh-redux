@@ -14,5 +14,9 @@ Loadable.preloadAll().then(() => {
     }
 
     console.log("Server listening on " + PORT + "...");
+
+    setInterval(function() {
+      http.get("http://chrisdalephotography.herokuapp.com");
+    }, 1200000); // every 20 minutes
   });
 });

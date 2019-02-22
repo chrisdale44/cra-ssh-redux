@@ -1,14 +1,17 @@
 import React, { Component } from "react";
 import styles from "./Thumbnail.module.css";
 
-const UPLOADS_DIR = "/photos/";
+const transform = "c_scale,w_300";
 
 class Thumbnail extends Component {
   render() {
-    const { style } = this.props;
+    const { style, photo } = this.props;
+    const photoUrl = photo.url.split("/");
+    photoUrl.splice(photoUrl.length - 2, 0, transform);
+
     return (
       <div className={styles.wrapper} style={{ ...style }}>
-        <img src={this.props.photo.url} alt={this.props.photo.caption} />
+        <img src={photoUrl.join("/")} alt={photo.caption} />
       </div>
     );
   }
