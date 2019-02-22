@@ -28,7 +28,7 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "npm run build && npm run start-server",
+    "start": "npm run start-server",
     "start-client": "react-scripts start",
     "start-server": "node server/bootstrap.js",
     "build": "react-scripts build",
