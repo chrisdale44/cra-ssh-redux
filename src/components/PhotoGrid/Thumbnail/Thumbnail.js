@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import styles from "./Thumbnail.module.css";
 
-const transform = "c_scale,w_300";
+const transform = "c_scale,w_400";
 
 class Thumbnail extends Component {
   render() {
