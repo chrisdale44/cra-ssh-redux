@@ -11,8 +11,9 @@ export const getAllSelectedFilters = state => {
         option => option.isSelected === true
       );
 
-      acc[filter.id] = selectedOption.length ? selectedOption[0].id : null;
-      return acc;
+      if (selectedOption.length) {
+        acc[filter.id] = selectedOption[0].id;
+      }
     }
     return acc;
   }, {});
