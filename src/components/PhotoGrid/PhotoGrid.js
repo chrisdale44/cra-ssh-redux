@@ -8,7 +8,7 @@ import refinePhotos from "../../helpers/refinePhotos";
 class PhotoGrid extends Component {
   render() {
     const { photos, selectedFilters, selectedTags } = this.props;
-    const width = 200;
+    const width = 250;
 
     let items = [];
 
