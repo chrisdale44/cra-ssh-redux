@@ -4,14 +4,6 @@
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
-    "@babel/core": "^7.2.2",
-    "@babel/plugin-proposal-class-properties": "^7.3.3",
-    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "@babel/preset-stage-2": "^7.0.0",
-    "@babel/register": "^7.0.0",
-    "babel-plugin-transform-dynamic-import": "^2.1.0",
     "classnames": "^2.2.6",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
@@ -28,14 +20,26 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "npm run start-server",
-    "start-client": "react-scripts start",
-    "start-server": "node server/bootstrap.js",
+    "start": "npm run server:watch",
+    "client:watch": "react-scripts start",
+    "server": "node server/bootstrap.js",
+    "server:watch": "npm run build && nodemon server/bootstrap.js",
+    "watch": "echo https://gist.github.com/int128/e0cdec598c5b3db728ff35758abdbafd",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/plugin-proposal-class-properties": "^7.3.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/preset-stage-2": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "babel-plugin-transform-dynamic-import": "^2.1.0",
+    "nodemon": "^1.18.10"
+  },
   "browserslist": [
     ">0.2%",
     "not dead",

@@ -7,8 +7,10 @@ import "./index.css";
 import App from "./App";
 import * as serviceWorker from "./serviceWorker";
 import configureStore from "./store/configureStore";
+import dummyStore from "./dummyStore.json";
 
-const store = configureStore(window.REDUX_STATE || {});
+const devStore = process.env.NODE_ENV === "development" ? dummyStore : {};
+const store = configureStore(window.REDUX_STATE || devStore || {});
 
 const AppBundle = (
   <ReduxProvider store={store}>

@@ -27,7 +27,9 @@ export default store => (req, res, next) => {
       </Loadable.Capture>
     );
 
-    const reduxState = JSON.stringify(store.getState());
+    const reduxState = `<script type="text/javascript" charset="utf-8">
+    window.REDUX_STATE = ${JSON.stringify(store.getState())};
+  </script>`;
 
     const getBundles = (assets, chunks) =>
       Object.keys(assets)
@@ -40,9 +42,9 @@ export default store => (req, res, next) => {
 
     return res.send(
       htmlData
+        .replace("</head>", reduxState, "</head>")
         .replace('<div id="root"></div>', `<div id="root">${html}</div>`)
         .replace("</body>", bundles.join("") + "</body>")
-        .replace('"__SERVER_REDUX_STATE__"', reduxState)
     );
   });
 };
