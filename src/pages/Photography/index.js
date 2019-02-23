@@ -1,14 +1,12 @@
 import React, { Component } from "react";
-import Refinements from "../../components/Refinements";
+import Nav from "../../components/Nav";
 import PhotoGrid from "../../components/PhotoGrid";
-import Header from "../../components/Header";
 
 class Photography extends Component {
   render() {
     return (
       <>
-        <Header />
-        <Refinements />
+        <Nav />
         <PhotoGrid />
       </>
     );

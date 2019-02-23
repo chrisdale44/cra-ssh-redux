@@ -1,0 +1,27 @@
+.nav {
+  position: relative;
+  display: block;
+  background-color: #101010;
+  color: white;
+  text-align: right;
+}
+
+.nav button {
+  position: absolute;
+  left: 0;
+  background-color: #101010;
+  border: none;
+  color: white;
+  padding: 15px 24px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.nav h1 {
+  margin: 0px 30px;
+  padding: 10px 0;
+  text-transform: capitalize;
+}

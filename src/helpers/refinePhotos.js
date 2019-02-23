@@ -18,13 +18,17 @@ const refinePhotosByFilter = (photos, selectedFilters) => {
 
   return photos.reduce((acc, photo) => {
     // use .find() here for Union of filters, rather than intersection
-    const res = selectedFilterKeys.every(filterKey => {
-      if (!selectedFilters[filterKey]) return false;
-      if (!photo.context) return false;
-      if (!photo.context.custom[filterKey]) return false;
-      if (selectedFilters[filterKey] === photo.context.custom[filterKey])
-        return true;
-    });
+    const res = selectedFilterKeys
+      .filter(
+        filterKey =>
+          selectedFilters[filterKey] &&
+          photo.context &&
+          photo.context.custom[filterKey]
+      )
+      .every(
+        filterKey =>
+          selectedFilters[filterKey] === photo.context.custom[filterKey]
+      );
 
     if (res) {
       acc.push(photo);
