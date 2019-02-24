@@ -12,7 +12,7 @@ const AsyncComponent = Loadable({
 class App extends Component {
   render() {
     return (
-      <div className="container">
+      <div className="App">
         <AsyncComponent />
       </div>
     );
