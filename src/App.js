@@ -11,7 +11,7 @@ const AsyncComponent = Loadable({
 class App extends Component {
   render() {
     return (
-      <div style={{ display: flex }}>
+      <div style={{ display: "flex" }}>
         <AsyncComponent />
       </div>
     );
