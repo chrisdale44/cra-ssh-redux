@@ -1,0 +1,13 @@
+.container {
+  flex: 1;
+}
+
+.container h1 {
+  text-align: right;
+  margin: 0px;
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: #101010;
+  color: white;
+}

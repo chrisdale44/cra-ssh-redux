@@ -4,6 +4,7 @@ import StackGrid from "react-stack-grid";
 import Thumbnail from "./Thumbnail";
 import { PHOTOS_SHAPE } from "./constants";
 import refinePhotos from "../../helpers/refinePhotos";
+import styles from "./PhotoGrid.module.css";
 
 class PhotoGrid extends Component {
   render() {
@@ -31,6 +32,7 @@ class PhotoGrid extends Component {
         columnWidth={width}
         monitorImagesLoaded={true}
         gutterWidth={30}
+        className={styles.container}
       >
         {items}
       </StackGrid>

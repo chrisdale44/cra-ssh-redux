@@ -1,30 +1,38 @@
 import React, { Component } from "react";
-import SideNav from "./SideNav";
+import Burger from "./Burger";
 import styles from "./Nav.module.css";
+import classNames from "classnames";
+
+let cx = classNames.bind(styles);
 
 class Nav extends Component {
   constructor() {
     super();
     this.state = {
-      sideNavOpen: false
+      open: false
     };
   }
 
   toggleSideNav = () => {
-    console.log("toggleSideNav");
-    const { sideNavOpen } = this.state;
-    this.setState({ sideNavOpen: !sideNavOpen });
+    const { open } = this.state;
+    this.setState({ open: !open });
   };
 
   render() {
-    const { sideNavOpen } = this.state;
-    console.log(sideNavOpen);
+    const { open } = this.state;
+    const { children } = this.props;
+    const classNames = cx({
+      [styles.container]: true,
+      [styles.open]: open
+    });
+
     return (
-      <nav className={styles.nav}>
-        <button onClick={this.toggleSideNav}>M</button>
-        <h1>chris dale</h1>
-        <SideNav open={sideNavOpen} />
-      </nav>
+      <div className={classNames}>
+        <nav>
+          <Burger handleClick={this.toggleSideNav} open={open} />
+          {children}
+        </nav>
+      </div>
     );
   }
 }

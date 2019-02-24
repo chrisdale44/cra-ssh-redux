@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Loadable from "react-loadable";
-import "./App.css";
+import styles from "./App.module.css";
 
 const AsyncComponent = Loadable({
   loader: () =>
@@ -12,7 +12,7 @@ const AsyncComponent = Loadable({
 class App extends Component {
   render() {
     return (
-      <div className="App">
+      <div className={styles.container}>
         <AsyncComponent />
       </div>
     );

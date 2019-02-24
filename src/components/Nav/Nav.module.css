@@ -1,27 +1,26 @@
-.nav {
+.container {
   position: relative;
+  flex: 0 0 60px;
+  transition: flex-basis 0.2s;
+}
+
+.container.open {
+  flex: 0 0 300px;
+}
+
+.container nav {
+  z-index: 1;
+  position: fixed;
+  width: 300px;
   display: block;
   background-color: #101010;
   color: white;
-  text-align: right;
+  height: 100vh;
+  transition: transform 0.2s;
+  transform: translate(-240px, 0);
+  padding-top: 60px;
 }
 
-.nav button {
-  position: absolute;
-  left: 0;
-  background-color: #101010;
-  border: none;
-  color: white;
-  padding: 15px 24px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.nav h1 {
-  margin: 0px 30px;
-  padding: 10px 0;
-  text-transform: capitalize;
+.container.open nav {
+  transform: translate(0, 0);
 }
