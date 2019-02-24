@@ -20,7 +20,7 @@
     "reselect": "^4.0.0"
   },
   "scripts": {
-    "start": "npm run server:watch",
+    "start": "npm run server",
     "client:watch": "react-scripts start",
     "server": "node server/bootstrap.js",
     "server:watch": "npm run build && nodemon server/bootstrap.js",
