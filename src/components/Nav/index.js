@@ -22,16 +22,18 @@ class Nav extends Component {
     const { open } = this.state;
     const { children } = this.props;
     const classNames = cx({
-      [styles.container]: true,
+      [styles.flexContainer]: true,
       [styles.open]: open
     });
 
     return (
       <div className={classNames}>
-        <nav>
-          <Burger handleClick={this.toggleSideNav} open={open} />
-          {children}
-        </nav>
+        <div className={styles.positionContainer}>
+            <nav>
+                <Burger handleClick={this.toggleSideNav} open={open} />
+                {children}
+            </nav>
+        </div>
       </div>
     );
   }

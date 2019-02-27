@@ -1,16 +1,25 @@
-.container {
+@value mobile-up from "../styles/breakpoints.css";
+
+.flexContainer {
   position: relative;
   flex: 0 0 60px;
   transition: flex-basis 0.2s;
 }
 
-.container.open {
-  flex: 0 0 300px;
+.positionContainer {
+  position: fixed;
+  -webkit-backface-visibility: hidden;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 3;
 }
 
-.container nav {
-  z-index: 1;
-  position: fixed;
+.flexContainer nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
   width: 300px;
   display: block;
   background-color: #101010;
@@ -21,6 +30,17 @@
   padding-top: 60px;
 }
 
-.container.open nav {
+.flexContainer.open nav {
   transform: translate(0, 0);
+}
+
+@media(mobile-up) {
+  .flexContainer.open {
+    flex: 0 0 300px;
+  }
+
+  .flexContainer nav {
+    position: fixed;
+    -webkit-backface-visibility: hidden;
+  }
 }
