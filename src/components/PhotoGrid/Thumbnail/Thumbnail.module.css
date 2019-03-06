@@ -1,6 +1,8 @@
+@value tablet-up from "../../styles/breakpoints.css";
+
 .wrapper {
   background-color: #ccc;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 img {
@@ -23,4 +25,10 @@ img {
   object-fit: contain;
   height: 100%;
   width: 100%;
+}
+
+@media (tablet-up) {
+  .wrapper {
+    margin-bottom: 30px;
+  }
 }

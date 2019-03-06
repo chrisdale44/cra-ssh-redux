@@ -2,14 +2,49 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import StackGrid from "react-stack-grid";
 import Thumbnail from "./Thumbnail";
+import throttler from "throttled-event-listener";
 import { PHOTOS_SHAPE } from "./constants";
 import refinePhotos from "../../helpers/refinePhotos";
 import styles from "./PhotoGrid.module.css";
+import { DESKTOP, MOBILE } from "../constants.js";
 
 class PhotoGrid extends Component {
+  dimensions = {
+    mobile: {
+      column: 110,
+      gutter: 15
+    },
+    desktop: {
+      column: 275,
+      gutter: 30
+    }
+  };
+  breakpoint = 720;
+
+  componentWillMount() {
+    throttler.add("resize", 300, this.handleResize);
+    this.setDimensions(window.innerWidth);
+  }
+
+  handleResize = e => {
+    if (!e || !e.target || !e.target.outerWidth) {
+      return;
+    }
+    this.setDimensions(e.target.innerWidth);
+  };
+
+  setDimensions(width) {
+    const viewport = width <= this.breakpoint ? MOBILE : DESKTOP;
+    this.setState({
+      viewport,
+      gutterWidth: this.dimensions[viewport].gutter,
+      columnWidth: this.dimensions[viewport].column
+    });
+  }
+
   render() {
     const { photos, selectedFilters, selectedTags } = this.props;
-    const width = 275;
+    const { gutterWidth, columnWidth } = this.state;
 
     let items = [];
 
@@ -22,16 +57,16 @@ class PhotoGrid extends Component {
 
       if (filteredPhotos.length) {
         items = filteredPhotos.map((v, i) => {
-          return <Thumbnail key={i} photo={v} width={width} />;
+          return <Thumbnail key={i} photo={v} width={columnWidth} />;
         });
       }
     }
 
     return (
       <StackGrid
-        columnWidth={width}
+        columnWidth={columnWidth}
         monitorImagesLoaded={true}
-        gutterWidth={30}
+        gutterWidth={gutterWidth}
         className={styles.container}
       >
         {items}
