@@ -26,6 +26,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-thunk": "^2.3.0",
     "reselect": "^4.0.0",
+    "ssr-window": "^1.0.1",
     "throttled-event-listener": "0.0.3"
   },
   "scripts": {
