@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import StackGrid from "react-stack-grid";
 import Thumbnail from "./Thumbnail";
-import throttler from "throttled-event-listener";
+import throttle from "lodash.throttle";
 import { PHOTOS_SHAPE } from "./constants";
 import refinePhotos from "../../helpers/refinePhotos";
 import styles from "./PhotoGrid.module.css";
@@ -22,7 +22,7 @@ class PhotoGrid extends Component {
   breakpoint = 720;
 
   componentWillMount() {
-    throttler.add("resize", 300, this.handleResize);
+    window.onresize = throttle(this.handleResize, 100);
     this.setDimensions(window.innerWidth);
   }
 

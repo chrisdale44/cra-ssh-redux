@@ -1,11 +1,9 @@
 import express from "express";
 import Loadable from "react-loadable";
 import indexController from "./controllers";
-import { window } from "ssr-window";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-console.log(window);
 
 app.use(indexController);
 
