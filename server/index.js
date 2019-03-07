@@ -5,7 +5,7 @@ import { window } from "ssr-window";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
-window = window || {};
+console.log(window);
 
 app.use(indexController);
 
