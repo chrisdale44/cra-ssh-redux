@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import StackGrid from "react-stack-grid";
 import Thumbnail from "./Thumbnail";
 import throttle from "lodash.throttle";
+import window from "global";
 import { PHOTOS_SHAPE } from "./constants";
 import refinePhotos from "../../helpers/refinePhotos";
 import styles from "./PhotoGrid.module.css";
