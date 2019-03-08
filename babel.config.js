@@ -15,6 +15,7 @@ const presets = [
 ];
 
 const plugins = [
+  "@babel/plugin-transform-object-assign",
   "@babel/plugin-syntax-dynamic-import",
   "babel-plugin-transform-dynamic-import",
   "@babel/plugin-proposal-class-properties",
