@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Accordion from "../../Accordion";
 import classNames from "classnames/bind";
 import styles from "./ComboBox.module.css";
 import { OPTIONS_SHAPE } from "../constants";
@@ -7,10 +8,10 @@ import { OPTIONS_SHAPE } from "../constants";
 let cx = classNames.bind(styles);
 
 class ComboBox extends Component {
-render() {
+  render() {
     const { options, title, toggleSelectedFilter } = this.props;
 
-    const opts = options.map(({id, isSelected}, i) => {
+    const opts = options.map(({ id, isSelected }, i) => {
       const className = cx({
         [styles.option]: true,
         [styles.selected]: isSelected ? true : false
@@ -27,10 +28,9 @@ render() {
     });
 
     return (
-      <div className={styles.wrapper}>
-        <span className={styles.title}>{title}</span>
+      <Accordion label={title}>
         <ul className={styles.optionsList}>{opts}</ul>
-      </div>
+      </Accordion>
     );
   }
 }

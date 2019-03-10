@@ -29,10 +29,10 @@ class Nav extends Component {
     return (
       <div className={classNames}>
         <div className={styles.positionContainer}>
-            <nav>
-                <Burger handleClick={this.toggleSideNav} open={open} />
-                {children}
-            </nav>
+          <nav>
+            <Burger handleClick={this.toggleSideNav} open={open} />
+            <div className={styles.refinements}>{children}</div>
+          </nav>
         </div>
       </div>
     );

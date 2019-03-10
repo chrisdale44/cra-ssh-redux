@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import ComboBox from "./ComboBox";
-import { toggleSelectedFilter } from "../../../../store/filters";
+import { toggleSelectedFilter } from "../../../store/filters";
 
 const mapStateToProps = state => ({
   ...state

@@ -1,9 +1,9 @@
 import { connect } from "react-redux";
-import Filters from "./Filters";
-import { getAllFilterOptions } from "../../../store/filters";
+import Tags from "./Tags";
+import { getAllTags } from "../../store/tags";
 
 const mapStateToProps = state => ({
-  filterOptions: getAllFilterOptions(state)
+  tags: getAllTags(state)
 });
 
 const mapDispatchToProps = () => ({});
@@ -11,4 +11,4 @@ const mapDispatchToProps = () => ({});
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Filters);
+)(Tags);

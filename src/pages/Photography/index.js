@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Nav from "../../components/Nav";
 import PhotoGrid from "../../components/PhotoGrid";
-import Refinements from "../../components/Refinements";
+import Filters from "../../components/Filters";
+import Tags from "../../components/Tags";
 import styles from "./Photography.module.css";
 
 class Photography extends Component {
@@ -9,7 +10,8 @@ class Photography extends Component {
     return (
       <>
         <Nav>
-          <Refinements />
+          <Filters />
+          <Tags />
         </Nav>
         <div className={styles.container}>
           <PhotoGrid />

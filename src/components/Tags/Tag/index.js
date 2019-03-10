@@ -1,6 +1,6 @@
 import { connect } from "react-redux";
 import Tag from "./Tag";
-import { toggleTagSelected } from "../../../../store/tags";
+import { toggleTagSelected } from "../../../store/tags";
 
 const mapStateToProps = state => ({
   ...state

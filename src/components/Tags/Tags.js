@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
+import Accordion from "../Accordion";
 import Tag from "./Tag";
 import styles from "./Tags.module.css";
 import { TAGS_SHAPE } from "./constants";
@@ -21,7 +22,11 @@ class Tags extends Component {
         );
       });
 
-    return <div className={styles.wrapper}>{mappedTags}</div>;
+    return (
+      <Accordion label={"tags"}>
+        <div className={styles.wrapper}>{mappedTags}</div>
+      </Accordion>
+    );
   }
 }
 

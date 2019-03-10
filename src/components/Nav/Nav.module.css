@@ -34,7 +34,7 @@
   transform: translate(0, 0);
 }
 
-@media(mobile-up) {
+@media (mobile-up) {
   .flexContainer.open {
     flex: 0 0 300px;
   }
@@ -43,4 +43,14 @@
     position: fixed;
     -webkit-backface-visibility: hidden;
   }
+}
+
+.refinements {
+  transition: transform 0.2s;
+  transition-delay: 0.1s;
+  transform: translate(-80px, 0);
+}
+
+.flexContainer.open .refinements {
+  transform: translate(0, 0);
 }

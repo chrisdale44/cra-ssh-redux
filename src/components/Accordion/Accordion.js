@@ -35,9 +35,9 @@ class Accordion extends Component {
 
     return (
       <div className={styles.wrapper}>
-        <label className={styles.label} onClick={this.handleClick}>
+        <button className={styles.label} onClick={this.handleClick}>
           {label} <span className={styles.icon}>{icon}</span>
-        </label>
+        </button>
         <div className={classNames}>{children}</div>
       </div>
     );
