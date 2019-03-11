@@ -1,15 +1,11 @@
-import { TOGGLE_TAG_SELECTED, TOGGLE_TAG_ENABLED } from "./constants";
+import { TOGGLE_TAG_SELECTED, TOGGLE_ENABLED_TAGS } from "./constants";
+import { getAllPhotos } from "../photos";
 
-export const toggleTagSelected = tagId => dispatch => {
+export const toggleTagSelected = tagId => (dispatch, getState) => {
   dispatch({
     type: TOGGLE_TAG_SELECTED,
     id: tagId
   });
-};
-
-export const toggleTagEnabled = tagId => dispatch => {
-  dispatch({
-    type: TOGGLE_TAG_ENABLED,
-    payload: tagId
-  });
+  const photos = getAllPhotos(getState());
+  dispatch({ type: TOGGLE_ENABLED_TAGS, photos });
 };

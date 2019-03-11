@@ -1,4 +1,5 @@
 import { FETCH_PHOTOS_SUCCESS } from "./constants";
+export { FETCH_PHOTOS_SUCCESS } from "./constants";
 
 export {
   getAllPhotos,

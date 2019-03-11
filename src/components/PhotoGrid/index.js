@@ -6,7 +6,7 @@ import { getAllSelectedFilters } from "../../store/filters";
 
 const mapStateToProps = state => ({
   photos: getAllPhotos(state),
-  selectedTags: getAllSelectedTags(state),
+  selectedTags: getAllSelectedTags(state.tags),
   selectedFilters: getAllSelectedFilters(state)
 });
 
