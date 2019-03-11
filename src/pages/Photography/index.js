@@ -9,13 +9,13 @@ class Photography extends Component {
   render() {
     return (
       <>
+        <div className={styles.container}>
+          <PhotoGrid />
+        </div>
         <Nav>
           <Filters />
           <Tags />
         </Nav>
-        <div className={styles.container}>
-          <PhotoGrid />
-        </div>
       </>
     );
   }

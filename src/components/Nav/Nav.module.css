@@ -6,51 +6,34 @@
   transition: flex-basis 0.2s;
 }
 
-.positionContainer {
-  position: fixed;
-  -webkit-backface-visibility: hidden;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  z-index: 3;
-}
-
 .flexContainer nav {
-  position: absolute;
+  position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   bottom: 0;
   width: 300px;
   display: block;
-  background-color: #101010;
+  background-color: #000;
   color: white;
   height: 100vh;
   transition: transform 0.2s;
-  transform: translate(-240px, 0);
+  transform: translateX(240px);
   padding-top: 60px;
+  opacity: 0.9;
+  will-change: transform;
+  z-index: 3;
 }
 
 .flexContainer.open nav {
-  transform: translate(0, 0);
-}
-
-@media (mobile-up) {
-  .flexContainer.open {
-    flex: 0 0 300px;
-  }
-
-  .flexContainer nav {
-    position: fixed;
-    -webkit-backface-visibility: hidden;
-  }
+  transform: translateX(0);
 }
 
 .refinements {
   transition: transform 0.2s;
   transition-delay: 0.1s;
-  transform: translate(-80px, 0);
+  transform: translateX(80px);
 }
 
 .flexContainer.open .refinements {
-  transform: translate(0, 0);
+  transform: translateX(0);
 }
