@@ -1,15 +1,23 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
 import StackGrid from "react-stack-grid";
-import Thumbnail from "./Thumbnail";
 import throttle from "lodash.throttle";
+import isEqual from "lodash.isequal";
 import window from "global";
 import { PHOTOS_SHAPE } from "./constants";
-import refinePhotos from "../../helpers/refinePhotos";
+
 import styles from "./PhotoGrid.module.css";
-import { DESKTOP, MOBILE } from "../constants.js";
+import { DESKTOP, MOBILE } from "../constants";
+import { InView } from "react-intersection-observer";
 
 class PhotoGrid extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      gridLayoutFinished: false
+    };
+  }
+
   dimensions = {
     mobile: {
       column: 110,
@@ -21,14 +29,46 @@ class PhotoGrid extends Component {
     }
   };
   breakpoint = 720;
+  layoutCounter = 0;
 
   componentWillMount() {
     window.onresize = throttle(this.handleResize, 100);
     this.setDimensions(window.innerWidth);
   }
 
+  componentDidUpdate(prevProps) {
+    if (!isEqual(prevProps.photos, this.props.photos)) {
+      this.setState({
+        gridLayoutFinished: false
+      });
+    }
+  }
+
+  onLayout = () => {
+    const { photos } = this.props;
+    const { gridLayoutFinished } = this.state;
+    this.layoutCounter++;
+    if (this.layoutCounter >= photos.length && !gridLayoutFinished) {
+      setTimeout(() => {
+        this.setState({
+          gridLayoutFinished: true
+        });
+      }, 2);
+    }
+  };
+
+  handleLazyLoad(inView, entry) {
+    if (!inView) {
+      return;
+    }
+
+    const img = entry.target.querySelector("img");
+    img.src = img.getAttribute("data-src");
+    img.removeAttribute("data-src");
+  }
+
   handleResize = e => {
-    if (!e || !e.target || !e.target.outerWidth) {
+    if (!e || !e.target || !e.target.innerWidth) {
       return;
     }
     this.setDimensions(e.target.innerWidth);
@@ -44,23 +84,44 @@ class PhotoGrid extends Component {
   }
 
   render() {
-    const { photos, selectedFilters, selectedTags } = this.props;
-    const { gutterWidth, columnWidth } = this.state;
+    const { photos } = this.props;
+    const { gutterWidth, columnWidth, gridLayoutFinished } = this.state;
+    const transform = `c_scale,w_${columnWidth}`;
 
     let items = [];
 
     if (photos.length) {
-      const filteredPhotos = refinePhotos(
-        photos,
-        selectedFilters,
-        selectedTags
-      );
+      items = photos.map(({ secure_url, height, width, caption }, i) => {
+        const photoUrl = secure_url.split("/");
+        photoUrl.splice(photoUrl.length - 2, 0, transform);
 
-      if (filteredPhotos.length) {
-        items = filteredPhotos.map((v, i) => {
-          return <Thumbnail key={i} photo={v} width={columnWidth} />;
-        });
-      }
+        const imgHeight = (columnWidth / width) * height;
+        const inlineCSS = { height: imgHeight, width: columnWidth };
+
+        if (gridLayoutFinished) {
+          return (
+            <InView onChange={this.handleLazyLoad} key={i} triggerOnce={true}>
+              {({ ref }) => (
+                <div
+                  ref={ref}
+                  className={styles.thumbnailWrapper}
+                  style={inlineCSS}
+                >
+                  <img data-src={photoUrl.join("/")} alt={caption} />
+                </div>
+              )}
+            </InView>
+          );
+        } else {
+          return (
+            <div
+              key={i}
+              className={styles.thumbnailWrapper}
+              style={inlineCSS}
+            />
+          );
+        }
+      });
     }
 
     return (
@@ -69,6 +130,8 @@ class PhotoGrid extends Component {
         monitorImagesLoaded={true}
         gutterWidth={gutterWidth}
         className={styles.container}
+        onLayout={this.onLayout}
+        duration={0}
       >
         {items}
       </StackGrid>
