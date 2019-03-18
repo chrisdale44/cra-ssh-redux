@@ -93,7 +93,7 @@ class PhotoGrid extends Component {
     if (photos.length) {
       items = photos.map(({ secure_url, height, width, caption }, i) => {
         const photoUrl = secure_url.split("/");
-        photoUrl.splice(photoUrl.length - 2, 0, transform);
+        photoUrl.splice(photoUrl.length - 3, 0, transform);
 
         const imgHeight = (columnWidth / width) * height;
         const inlineCSS = { height: imgHeight, width: columnWidth };
