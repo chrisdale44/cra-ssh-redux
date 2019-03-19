@@ -20,6 +20,7 @@
   display: block;
   object-fit: contain;
   width: 100%;
+  cursor: pointer;
 }
 
 .thumbnailWrapper.squareCrop {

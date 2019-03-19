@@ -1,5 +1,9 @@
 import axios from "axios";
-import { FETCH_PHOTOS_SUCCESS } from "./constants";
+import {
+  FETCH_PHOTOS_SUCCESS,
+  SET_OPEN_PHOTO,
+  CLOSE_OPEN_PHOTO
+} from "./constants";
 
 export const fetchAllPhotos = url => dispatch => {
   console.log("Fetch: ", url);
@@ -40,3 +44,17 @@ const fetchPhotosSuccess = photos => ({
   type: FETCH_PHOTOS_SUCCESS,
   payload: { photos }
 });
+
+export const setOpenPhoto = (public_id, url) => dispatch => {
+  dispatch({
+    type: SET_OPEN_PHOTO,
+    public_id,
+    url
+  });
+};
+
+export const closeOpenPhoto = () => dispatch => {
+  dispatch({
+    type: CLOSE_OPEN_PHOTO
+  });
+};

@@ -1,9 +1,15 @@
 import { connect } from "react-redux";
 import PhotoGrid from "./PhotoGrid";
-import { getAllPhotos } from "../../store/photos";
+import { getAllPhotos, setOpenPhoto } from "../../store/photos";
 import { getAllSelectedTags } from "../../store/tags";
 import { getAllSelectedFilters } from "../../store/filters";
 import refinePhotos from "../../helpers/refinePhotos";
+
+const mapDispatchToProps = dispatch => ({
+  setOpenPhoto: (public_url, url) => {
+    return dispatch(setOpenPhoto(public_url, url));
+  }
+});
 
 const mapStateToProps = state => ({
   photos: refinePhotos(
@@ -13,4 +19,7 @@ const mapStateToProps = state => ({
   )
 });
 
-export default connect(mapStateToProps)(PhotoGrid);
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)(PhotoGrid);

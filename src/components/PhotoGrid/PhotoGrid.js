@@ -83,6 +83,11 @@ class PhotoGrid extends Component {
     });
   }
 
+  handleClick = (publicId, secureUrl) => {
+    const { setOpenPhoto } = this.props;
+    setOpenPhoto(publicId, secureUrl);
+  };
+
   render() {
     const { photos } = this.props;
     const { gutterWidth, columnWidth, gridLayoutFinished } = this.state;
@@ -91,37 +96,44 @@ class PhotoGrid extends Component {
     let items = [];
 
     if (photos.length) {
-      items = photos.map(({ secure_url, height, width, caption }, i) => {
-        const photoUrl = secure_url.split("/");
-        photoUrl.splice(photoUrl.length - 3, 0, transform);
+      items = photos.map(
+        ({ secure_url, height, width, caption, public_id }, i) => {
+          const photoUrl = secure_url.split("/");
+          const spliceIndex = photoUrl.indexOf(public_id.split("/")[0]);
+          photoUrl.splice(spliceIndex, 0, transform);
 
-        const imgHeight = (columnWidth / width) * height;
-        const inlineCSS = { height: imgHeight, width: columnWidth };
+          const imgHeight = (columnWidth / width) * height;
+          const inlineCSS = { height: imgHeight, width: columnWidth };
 
-        if (gridLayoutFinished) {
-          return (
-            <InView onChange={this.handleLazyLoad} key={i} triggerOnce={true}>
-              {({ ref }) => (
-                <div
-                  ref={ref}
-                  className={styles.thumbnailWrapper}
-                  style={inlineCSS}
-                >
-                  <img data-src={photoUrl.join("/")} alt={caption} />
-                </div>
-              )}
-            </InView>
-          );
-        } else {
-          return (
-            <div
-              key={i}
-              className={styles.thumbnailWrapper}
-              style={inlineCSS}
-            />
-          );
+          if (gridLayoutFinished) {
+            return (
+              <InView onChange={this.handleLazyLoad} key={i} triggerOnce={true}>
+                {({ ref }) => (
+                  <div
+                    ref={ref}
+                    className={styles.thumbnailWrapper}
+                    style={inlineCSS}
+                  >
+                    <img
+                      data-src={photoUrl.join("/")}
+                      alt={caption}
+                      onClick={() => this.handleClick(public_id, secure_url)}
+                    />
+                  </div>
+                )}
+              </InView>
+            );
+          } else {
+            return (
+              <div
+                key={i}
+                className={styles.thumbnailWrapper}
+                style={inlineCSS}
+              />
+            );
+          }
         }
-      });
+      );
     }
 
     return (

@@ -24,3 +24,5 @@ export const getPhotoSubject = createSelector(
   getPhoto,
   photo => photo && photo.subject
 );
+
+export const getOpenPhoto = state => state.photos.openPhoto;
