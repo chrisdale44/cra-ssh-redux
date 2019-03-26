@@ -23,7 +23,8 @@ const actionIndex = (req, res, next) => {
   });
 };
 
-router.use("^/*", actionIndex);
+router.use("^/$", actionIndex);
+router.use("^/photography$", actionIndex);
 
 router.use(
   express.static(path.resolve(__dirname, "..", "..", "build"), {
