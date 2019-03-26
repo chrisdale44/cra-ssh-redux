@@ -17,12 +17,13 @@ const API_URL = `https://${API_KEY}:${API_SECRET}@${CLOUD_BASE}${CLOUD_NAME}${PH
 
 const actionIndex = (req, res, next) => {
   const store = configureStore();
+  console.log("fetchAllPhotos");
   store.dispatch(fetchAllPhotos(API_URL)).then(() => {
     serverRenderer(store)(req, res, next);
   });
 };
 
-router.use("^/$", actionIndex);
+router.use("^/*", actionIndex);
 
 router.use(
   express.static(path.resolve(__dirname, "..", "..", "build"), {
