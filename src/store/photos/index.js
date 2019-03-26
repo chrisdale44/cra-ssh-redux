@@ -22,7 +22,7 @@ export { fetchAllPhotos, setOpenPhoto, closeOpenPhoto } from "./actions";
 
 const initialState = {
   photos: [],
-  openPhoto: {},
+  openPhoto: null,
   error: null
 };
 
