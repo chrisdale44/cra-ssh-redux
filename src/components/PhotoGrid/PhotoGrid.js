@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import PropTypes from "prop-types";
-import StackGrid from "react-stack-grid";
+import StackGrid, { transitions } from "react-stack-grid";
 import throttle from "lodash.throttle";
 import isEqual from "lodash.isequal";
 import window from "global";
@@ -9,6 +9,7 @@ import { PHOTOS_SHAPE } from "./constants";
 import styles from "./PhotoGrid.module.css";
 import { DESKTOP, MOBILE } from "../constants";
 import { InView } from "react-intersection-observer";
+const { scaleUp } = transitions;
 
 class PhotoGrid extends Component {
   constructor(props) {
@@ -30,6 +31,7 @@ class PhotoGrid extends Component {
   };
   breakpoint = 720;
   layoutCounter = 0;
+  loadedImages = [];
 
   componentWillMount() {
     window.onresize = throttle(this.handleResize, 100);
@@ -49,23 +51,25 @@ class PhotoGrid extends Component {
     const { gridLayoutFinished } = this.state;
     this.layoutCounter++;
     if (this.layoutCounter >= photos.length && !gridLayoutFinished) {
+      this.layoutCounter = 0;
       setTimeout(() => {
         this.setState({
           gridLayoutFinished: true
         });
-      }, 2);
+      }, 100); // wait for animation to finish
     }
   };
 
-  handleLazyLoad(inView, entry) {
+  handleLazyLoad = (inView, entry) => {
     if (!inView) {
       return;
     }
 
     const img = entry.target.querySelector("img");
     img.src = img.getAttribute("data-src");
+    this.loadedImages.push(img.getAttribute("data-id"));
     img.removeAttribute("data-src");
-  }
+  };
 
   handleResize = e => {
     if (!e || !e.target || !e.target.innerWidth) {
@@ -83,9 +87,9 @@ class PhotoGrid extends Component {
     });
   }
 
-  handleClick = (publicId, secureUrl) => {
+  handleClick = (public_id, secureUrl) => {
     const { setOpenPhoto } = this.props;
-    setOpenPhoto(publicId, secureUrl);
+    setOpenPhoto(public_id, secureUrl);
   };
 
   render() {
@@ -105,7 +109,21 @@ class PhotoGrid extends Component {
           const imgHeight = (columnWidth / width) * height;
           const inlineCSS = { height: imgHeight, width: columnWidth };
 
-          if (gridLayoutFinished) {
+          if (this.loadedImages.includes(public_id)) {
+            return (
+              <div
+                className={styles.thumbnailWrapper}
+                style={inlineCSS}
+                key={i}
+              >
+                <img
+                  src={photoUrl.join("/")}
+                  alt={caption}
+                  onClick={() => this.handleClick(public_id, secure_url)}
+                />
+              </div>
+            );
+          } else if (gridLayoutFinished) {
             return (
               <InView onChange={this.handleLazyLoad} key={i} triggerOnce={true}>
                 {({ ref }) => (
@@ -118,6 +136,7 @@ class PhotoGrid extends Component {
                       data-src={photoUrl.join("/")}
                       alt={caption}
                       onClick={() => this.handleClick(public_id, secure_url)}
+                      data-id={public_id}
                     />
                   </div>
                 )}
@@ -143,7 +162,12 @@ class PhotoGrid extends Component {
         gutterWidth={gutterWidth}
         className={styles.container}
         onLayout={this.onLayout}
-        duration={0}
+        appear={scaleUp.appear}
+        appearDelay={0}
+        appeared={scaleUp.appeared}
+        enter={scaleUp.enter}
+        entered={scaleUp.entered}
+        duration={300}
       >
         {items}
       </StackGrid>

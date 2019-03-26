@@ -1,0 +1,29 @@
+.close {
+  position: absolute;
+  top: 15px;
+  right: 100px;
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: none;
+  cursor: pointer;
+  margin: 0;
+  padding: 2px;
+}
+
+.close span {
+  display: block;
+  width: 32px;
+  height: 4px;
+  position: relative;
+  background: white;
+  border-radius: 3px;
+  transform-origin: 0px 0px;
+}
+.close span:nth-child(1) {
+  transform: rotate(45deg) translate(-6px, -6px);
+}
+
+.close span:nth-child(2) {
+  transform: rotate(-45deg) translate(-9px, 5px);
+}
