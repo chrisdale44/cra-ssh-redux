@@ -9,6 +9,7 @@ import styles from "./Photography.module.css";
 class Photography extends Component {
   render() {
     const { photo } = this.props;
+    console.log(photo);
     return (
       <>
         <div className={styles.container}>
