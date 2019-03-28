@@ -1,4 +1,4 @@
-import AsyncLoader from "../AsyncLoader";
+import AsyncLoader from "../AsyncLoader.js";
 
 const AsyncPortfolio = AsyncLoader({
   loader: () => import(/* webpackChunkName: "home" */ "./App"),

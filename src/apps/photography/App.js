@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Provider as ReduxProvider } from "react-redux";
-import AsyncLoader from "../AsyncLoader";
+import AsyncLoader from "../AsyncLoader.js";
 import configureStore from "./store/configureStore";
 import dummyStore from "./dummyStore.json";
 
