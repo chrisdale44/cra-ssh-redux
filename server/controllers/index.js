@@ -1,6 +1,7 @@
 import express from "express";
 import path from "path";
-import serverRenderer from "../middleware/renderer";
+import renderer from "../middleware/renderer";
+import reduxRenderer from "../middleware/reduxRenderer";
 import configureStore from "../../src/store/configureStore";
 import { fetchAllPhotos } from "../../src/store/photos";
 
@@ -15,19 +16,21 @@ const {
 } = process.env;
 const API_URL = `https://${API_KEY}:${API_SECRET}@${CLOUD_BASE}${CLOUD_NAME}${PHOTOS_PATH}?max_results=${MAX_RESULTS}&tags=true&context=true`;
 
-const actionIndex = (req, res, next) => {
-  const store = configureStore();
-  console.log("fetchAllPhotos");
-  store.dispatch(fetchAllPhotos(API_URL)).then(() => {
-    serverRenderer(store)(req, res, next);
-  });
-};
-
 router.use(
   express.static(path.resolve(__dirname, "..", "..", "build"), {
     maxAge: "30d"
   })
 );
-router.use("^/*", actionIndex);
+router.use("^/photography", (req, res) => {
+  const store = configureStore();
+  console.log("=== fetchAllPhotos");
+  store.dispatch(fetchAllPhotos(API_URL)).then(() => {
+    reduxRenderer(store)(req, res);
+  });
+});
+router.use("^/*", () => {
+  console.log("=== not fetchingAllPhotos");
+  renderer()(req, res, next);
+});
 
 export default router;
