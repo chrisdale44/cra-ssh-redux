@@ -4,7 +4,7 @@ import { StaticRouter } from "react-router-dom";
 import Loadable from "react-loadable";
 import manifest from "../../build/asset-manifest.json";
 
-import App from "../../src/portfolio";
+import App from "../../src/apps/portfolio";
 
 import path from "path";
 import fs from "fs";
