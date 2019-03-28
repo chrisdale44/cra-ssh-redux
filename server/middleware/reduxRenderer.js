@@ -5,7 +5,7 @@ import Loadable from "react-loadable";
 import manifest from "../../build/asset-manifest.json";
 import { Provider as ReduxProvider } from "react-redux";
 
-import App from "../../src/photography";
+import App from "../../src/apps/photography";
 
 import path from "path";
 import fs from "fs";
