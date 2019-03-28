@@ -1,5 +1,3 @@
-import { connect } from "react-redux";
-import { getOpenPhoto } from "./store/photos";
 import React, { Component } from "react";
 import Nav from "./components/Nav";
 import PhotoGrid from "./components/PhotoGrid";
@@ -7,10 +5,6 @@ import Filters from "./components/Filters";
 import Tags from "./components/Tags";
 import PhotoModal from "./components/PhotoModal";
 import styles from "./Photography.module.css";
-
-const mapStateToProps = state => ({
-  photo: getOpenPhoto(state)
-});
 
 class Photography extends Component {
   render() {
@@ -31,4 +25,4 @@ class Photography extends Component {
   }
 }
 
-export default connect(mapStateToProps)(Photography);
+export default Photography;

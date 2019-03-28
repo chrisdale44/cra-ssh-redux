@@ -1,5 +1,5 @@
 const refinePhotosByTag = (photos, selectedTags) => {
-  return photos.reduce((acc, photo, i) => {
+  return photos.reduce((acc, photo) => {
     if (
       !selectedTags.length ||
       !selectedTags.find(tag => photo.tags.indexOf(tag) === -1)

@@ -1,25 +1,9 @@
-import React, { Component } from "react";
-import { Provider as ReduxProvider } from "react-redux";
-import AsyncLoader from "../AsyncLoader";
-import configureStore from "./store/configureStore";
-import dummyStore from "./dummyStore.json";
+import { connect } from "react-redux";
+import { getOpenPhoto } from "./store/photos";
+import Photography from "./Photography";
 
-const devStore = process.env.NODE_ENV === "development" ? dummyStore : {};
-const store = configureStore(window.REDUX_STATE || devStore || {});
-
-const AsyncPhotography = AsyncLoader({
-  loader: () => import(/* webpackChunkName: "photography" */ "./Photography"),
-  modules: ["photography"]
+const mapStateToProps = state => ({
+  photo: getOpenPhoto(state)
 });
 
-class App extends Component {
-  render() {
-    return (
-      <ReduxProvider store={store}>
-        <AsyncPhotography />
-      </ReduxProvider>
-    );
-  }
-}
-
-export default App;
+export default connect(mapStateToProps)(Photography);

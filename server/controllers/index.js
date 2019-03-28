@@ -1,9 +1,9 @@
 import express from "express";
 import path from "path";
-import renderer from "../middleware/renderer";
+// import renderer from "../middleware/renderer";
 import reduxRenderer from "../middleware/reduxRenderer";
-import configureStore from "../../src/store/configureStore";
-import { fetchAllPhotos } from "../../src/store/photos";
+import configureStore from "../../src/apps/photography/store/configureStore";
+import { fetchAllPhotos } from "../../src/apps/photography/store/photos";
 
 const router = express.Router();
 const {
@@ -28,9 +28,9 @@ router.use("^/photography", (req, res) => {
     reduxRenderer(store)(req, res);
   });
 });
-router.use("^/*", () => {
-  console.log("=== not fetchingAllPhotos");
-  renderer()(req, res, next);
-});
+// router.use("^/*", (req, res) => {
+//   console.log("=== not fetchingAllPhotos");
+//   renderer()(req, res, next);
+// });
 
 export default router;

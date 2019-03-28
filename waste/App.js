@@ -3,7 +3,7 @@ import Loadable from "react-loadable";
 
 const AsyncComponent = Loadable({
   loader: () =>
-    import(/* webpackChunkName: "photography" */ "./pages/Photography"),
+    import(/* webpackChunkName: "photography" */ "../src/apps/photography/App"),
   loading: () => <div>loading...</div>,
   modules: ["photography"]
 });
