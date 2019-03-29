@@ -1,6 +1,7 @@
 import express from "express";
 import Loadable from "react-loadable";
 import indexController from "./controllers";
+import axios from "axios";
 
 const PORT = process.env.PORT || 3000;
 const app = express();
@@ -12,11 +13,9 @@ Loadable.preloadAll().then(() => {
     if (error) {
       return console.log("Something bad happened", error);
     }
-
     console.log("Server listening on " + PORT + "...");
-
     setInterval(function() {
-      http.get("http://chrisdalephotography.herokuapp.com");
+      axios.get("http://chrisdalephotography.herokuapp.com");
     }, 1200000); // every 20 minutes
   });
 });
