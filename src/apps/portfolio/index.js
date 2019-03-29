@@ -1,7 +1,9 @@
-import AsyncLoader from "../AsyncLoader.js";
+import React from "react";
+import Loadable from "react-loadable";
 
-const AsyncPortfolio = AsyncLoader({
+const AsyncPortfolio = Loadable({
   loader: () => import(/* webpackChunkName: "home" */ "./App"),
+  loading: () => <div>loading...</div>,
   modules: ["home"]
 });
 
