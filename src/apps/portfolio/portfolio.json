@@ -1,0 +1,229 @@
+{
+  "name": "Chris Dale",
+  "socialLinks": [{}],
+  "profile": "",
+  "skills": [
+    { "name": "HTML5", "icon": "html5" },
+    { "name": "CSS3", "icon": "css3" },
+    { "name": "Javascript ES6", "icon": "javascript" },
+    { "name": "React", "icon": "react" },
+    { "name": "Redux", "icon": "html5" },
+    { "name": "Jest", "icon": "html5" },
+    { "name": "NodeJS", "icon": "nodejs" },
+    { "name": "Express", "icon": "express" },
+    { "name": "NoSQL", "icon": "html5" },
+    { "name": "Webpack", "icon": "webpack" },
+
+    { "name": "A11y", "icon": "html5" },
+    { "name": "X-Browser", "icon": "xbrowser" },
+    { "name": "Scalability", "icon": "nodejs" },
+    { "name": "Performance", "icon": "express" },
+    { "name": "Git/ Github", "icon": "git" },
+    { "name": "CLI", "icon": "webpack" },
+    { "name": "Photoshop", "icon": "express" },
+    { "name": "PHP", "icon": "php" },
+    { "name": "SQL", "icon": "webpack" }
+  ],
+  "projects": [
+    {
+      "title": "Photography Portfolio",
+      "description": "",
+      "link": ""
+    },
+    {
+      "title": "Poker",
+      "description": "",
+      "link": ""
+    }
+  ],
+  "experience": [
+    {
+      "role": "Associate Web Engineer",
+      "company": {
+        "name": "ASOS",
+        "logo": "",
+        "description": ""
+      },
+      "startDate": "2017-05-01",
+      "endDate": "present",
+      "description": ""
+    },
+    {
+      "role": "Consultant Front-End Developer",
+      "company": {
+        "name": "Creative Services",
+        "logo": "",
+        "description": ""
+      },
+      "startDate": "2015-09-01",
+      "endDate": "2017-03-01",
+      "description": "",
+      "projects": [
+        {
+          "company": {
+            "name": "Three Mobile",
+            "logo": "",
+            "description": ""
+          },
+          "startDate": "2016-11-01",
+          "endDate": "2017-03-01",
+          "description": ""
+        },
+        {
+          "company": {
+            "name": "Royal Navy",
+            "logo": "",
+            "description": ""
+          },
+          "startDate": "2016-05-01",
+          "endDate": "2016-11-01",
+          "description": ""
+        },
+        {
+          "company": {
+            "name": "Home Office",
+            "logo": "",
+            "description": ""
+          },
+          "startDate": "2016-05-01",
+          "endDate": "2016-06-01",
+          "description": ""
+        },
+        {
+          "company": {
+            "name": "Vodafone",
+            "logo": "",
+            "description": ""
+          },
+          "startDate": "2015-10-01",
+          "endDate": "2016-05-01",
+          "description": ""
+        },
+        {
+          "company": {
+            "name": "Transport for London",
+            "logo": "",
+            "description": ""
+          },
+          "startDate": "2015-09-01",
+          "endDate": "2015-10-01",
+          "description": ""
+        }
+      ]
+    },
+    {
+      "role": "Front-End Developer",
+      "company": {
+        "name": "First Utility",
+        "logo": "",
+        "description": ""
+      },
+      "startDate": "2013-06-01",
+      "endDate": "2014-09-01",
+      "description": ""
+    },
+    {
+      "role": "Junior Front-End Developer",
+      "company": {
+        "name": "mydeco",
+        "logo": "",
+        "description": ""
+      },
+      "startDate": "2012-09-01",
+      "endDate": "2013-05-01",
+      "description": ""
+    },
+    {
+      "role": "Junior Full-Stack Developer",
+      "company": {
+        "name": "OpenBet",
+        "logo": "",
+        "description": ""
+      },
+      "startDate": "2011-09-01",
+      "endDate": "2012-05-01",
+      "description": ""
+    },
+    {
+      "role": "Intern Back-End Developer",
+      "company": {
+        "name": "Websites Designed",
+        "logo": "",
+        "description": ""
+      },
+      "startDate": "",
+      "endDate": "",
+      "description": "",
+      "projects": [
+        {
+          "company": {
+            "name": "Devon County Council",
+            "logo": "",
+            "description": ""
+          },
+          "startDate": "2010-08-01",
+          "endDate": "2010-09-01",
+          "description": ""
+        }
+      ]
+    }
+  ],
+  "education": {
+    "university": [
+      {
+        "name": "University of Southampton",
+        "degree": "Information Technology in Organisations, BSc",
+        "result": "First Class with Honours",
+        "description": "",
+        "societies": "Extreme sports society"
+      }
+    ],
+    "school": [
+      {
+        "name": "Reigate Grammar School",
+        "qualifications": [
+          {
+            "name": "A Level",
+            "subjects": [
+              {
+                "title": "Business Studies",
+                "result": "A"
+              },
+              {
+                "title": "Art",
+                "result": "A"
+              },
+              {
+                "title": "History",
+                "result": "B"
+              }
+            ]
+          },
+          {
+            "name": "AS Level",
+            "subjects": [
+              {
+                "title": "Information Technology",
+                "result": "B"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "interests": [
+    {
+      "title": "Skateboarding",
+      "description": ""
+    },
+    {
+      "title": "Photography",
+      "description": ""
+    },
+    {
+      "title": "Film Making",
+      "description": ""
+    }
+  ]
+}

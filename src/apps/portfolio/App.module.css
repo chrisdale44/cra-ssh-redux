@@ -1,0 +1,83 @@
+.wrapper {
+}
+
+.wrapper header {
+  background-color: #000;
+}
+
+.wrapper header,
+.wrapper section,
+.wrapper footer {
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  padding: 5px 30px;
+  color: white;
+}
+
+section {
+  min-height: 300px;
+  color: #101010;
+}
+
+section h2 {
+  background-color: #212121;
+}
+
+.wrapper footer {
+  color: #606060;
+}
+
+.skills ul {
+  list-style: none;
+}
+
+.skills li {
+  line-height: 40px;
+}
+
+.skills li span {
+  display: inline-block;
+  text-indent: -100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 40px;
+  width: 40px;
+  background-size: 40px;
+}
+
+.html5 {
+  background-image: url("./icons/html5.svg");
+}
+
+.css3 {
+  background-image: url("./icons/css3.svg");
+}
+.javascript {
+  background-image: url("./icons/javascript.svg");
+}
+.react {
+  background-image: url("./icons/react.svg");
+}
+.nodejs {
+  background-image: url("./icons/nodejs.svg");
+}
+.express {
+  background-image: url("./icons/express.svg");
+}
+.webpack {
+  background-image: url("./icons/webpack.svg");
+}
+.xbrowser {
+  background-image: url("./icons/xbrowser.svg");
+}
+.git {
+  background-image: url("./icons/git.svg");
+}
+.php {
+  background-image: url("./icons/php.svg");
+}
