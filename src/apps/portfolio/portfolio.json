@@ -1,6 +1,10 @@
 {
   "name": "Chris Dale",
-  "socialLinks": [{}],
+  "socialLinks": [
+    { "name": "LinkedIn", "icon": "linkedin", "url": "" },
+    { "name": "AngelList", "icon": "angellist", "url": "" },
+    { "name": "GitHub", "icon": "github", "url": "" }
+  ],
   "profile": "",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
@@ -9,6 +13,7 @@
     { "name": "Javascript ES6", "icon": "javascript" },
     { "name": "React", "icon": "react" },
     { "name": "Redux", "icon": "redux" },
+    { "name": "CSS Modules", "icon": "cssmodules" },
     { "name": "Jest", "icon": "jest" },
     { "name": "Nightwatch", "icon": "" },
     { "name": "Cypress", "icon": "" },

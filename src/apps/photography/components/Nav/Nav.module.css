@@ -1,4 +1,4 @@
-@value mobile-up from "../styles/breakpoints.css";
+@value mobile-up from "../../../../styles/breakpoints.css";
 
 .flexContainer {
   position: relative;

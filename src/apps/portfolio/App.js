@@ -1,6 +1,8 @@
 import React, { Component } from "react";
-import styles from "./App.module.css";
+import appStyles from "./App.module.css";
+import icons from "./icons/icons.module.css";
 import portfolio from "./portfolio.json";
+const styles = { ...appStyles, ...icons };
 
 class Portfolio extends Component {
   render() {
@@ -18,6 +20,11 @@ class Portfolio extends Component {
       <div className={styles.wrapper}>
         <header>
           <h1>{name}</h1>
+          {socialLinks.map(({ name, icon, url }) => (
+            <a href={url}>
+              <img src={icon} alt={name} />
+            </a>
+          ))}
         </header>
         <section className={styles.profile}>
           <h2>Profile</h2>

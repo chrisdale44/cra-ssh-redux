@@ -5,7 +5,7 @@ import Loadable from "react-loadable";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 import AsyncPortfolio from "./apps/portfolio";
 import AsyncPhotography from "./apps/photography/App";
-import "./global.css";
+import "./styles/global.css";
 import * as serviceWorker from "./serviceWorker";
 
 const AppBundle = (

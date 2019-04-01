@@ -1,8 +1,18 @@
-.wrapper {
+@import "./icons/icons.module.css";
+@import "../../styles/breakpoints.css";
+
+header {
+  display: block;
+  background-color: #000;
 }
 
-.wrapper header {
-  background-color: #000;
+header h1 {
+  display: inline-block;
+}
+
+header a {
+  float: right;
+  line-height: 48px;
 }
 
 .wrapper header,
@@ -22,6 +32,7 @@ h2 {
 section {
   min-height: 300px;
   color: #101010;
+  display: block;
 }
 
 section h2 {
@@ -39,81 +50,12 @@ section h2 {
 }
 
 .skills li {
-  line-height: 36px;
+  line-height: 48px;
   position: relative;
   padding: 8px;
 }
 
 .skills li span {
-  display: inline-block;
   position: absolute;
-  text-indent: -100%;
-  background-repeat: no-repeat;
-  background-position: top left;
-  height: 36px;
-  width: 36px;
-  background-size: 36px;
-  left: -36px;
-}
-
-.html5 {
-  background-image: url("./icons/html5.svg");
-}
-
-.css3 {
-  background-image: url("./icons/css3.svg");
-}
-.javascript {
-  background-image: url("./icons/javascript.svg");
-}
-.react {
-  background-image: url("./icons/react.svg");
-}
-.nodejs {
-  background-image: url("./icons/nodejs.svg");
-}
-.express {
-  background-image: url("./icons/express.svg");
-}
-.webpack {
-  background-image: url("./icons/webpack.svg");
-}
-.xbrowser {
-  background-image: url("./icons/xbrowser.svg");
-}
-.photoshop {
-  background-image: url("./icons/photoshop.svg");
-}
-.git {
-  background-image: url("./icons/git.svg");
-}
-.php {
-  background-image: url("./icons/php.svg");
-}
-.mongodb {
-  background-image: url("./icons/mongodb.svg");
-}
-.a11y {
-  background-image: url("./icons/a11y.svg");
-}
-.sass {
-  background-image: url("./icons/sass.svg");
-}
-.mysql {
-  background-image: url("./icons/mysql.svg");
-}
-.redux {
-  background-image: url("./icons/redux.svg");
-}
-.jest {
-  background-image: url("./icons/jest.svg");
-}
-.heroku {
-  background-image: url("./icons/heroku.svg");
-}
-.babel {
-  background-image: url("./icons/babel.svg");
-}
-.docker {
-  background-image: url("./icons/docker.svg");
+  left: -50px;
 }

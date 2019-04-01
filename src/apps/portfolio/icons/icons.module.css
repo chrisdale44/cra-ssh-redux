@@ -1,0 +1,94 @@
+.icon {
+  display: inline-block;
+  text-indent: -100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  height: 48px;
+  width: 48px;
+  background-size: 48px;
+}
+
+.html5 {
+  composes: icon;
+  background-image: url("./html5.svg");
+}
+.css3 {
+  composes: icon;
+  background-image: url("./css3.svg");
+}
+.javascript {
+  composes: icon;
+  background-image: url("./javascript.svg");
+}
+.react {
+  composes: icon;
+  background-image: url("./react.svg");
+}
+.nodejs {
+  composes: icon;
+  background-image: url("./nodejs.svg");
+}
+.express {
+  composes: icon;
+  background-image: url("./express.svg");
+}
+.webpack {
+  composes: icon;
+  background-image: url("./webpack.svg");
+}
+.xbrowser {
+  composes: icon;
+  background-image: url("./xbrowser.svg");
+}
+.photoshop {
+  composes: icon;
+  background-image: url("./photoshop.svg");
+}
+.git {
+  composes: icon;
+  background-image: url("./git.svg");
+}
+.php {
+  composes: icon;
+  background-image: url("./php.svg");
+}
+.mongodb {
+  composes: icon;
+  background-image: url("./mongodb.svg");
+}
+.a11y {
+  composes: icon;
+  background-image: url("./a11y.svg");
+}
+.sass {
+  composes: icon;
+  background-image: url("./sass.svg");
+}
+.mysql {
+  composes: icon;
+  background-image: url("./mysql.svg");
+}
+.redux {
+  composes: icon;
+  background-image: url("./redux.svg");
+}
+.jest {
+  composes: icon;
+  background-image: url("./jest.svg");
+}
+.heroku {
+  composes: icon;
+  background-image: url("./heroku.svg");
+}
+.babel {
+  composes: icon;
+  background-image: url("./babel.svg");
+}
+.docker {
+  composes: icon;
+  background-image: url("./docker.svg");
+}
+.cssmodules {
+  composes: icon;
+  background-image: url("./css-modules.svg");
+}
