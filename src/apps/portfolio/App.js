@@ -24,7 +24,7 @@ class Portfolio extends Component {
           <p>{profile}</p>
         </section>
         <section className={styles.skills}>
-          <h2>Core Skills</h2>
+          <h2>Skills</h2>
           <ul>
             {skills.map(({ name, icon }) => (
               <li>
@@ -36,8 +36,8 @@ class Portfolio extends Component {
         </section>
         <section className={styles.projects}>
           <h2>Personal Projects</h2>
-          {projects.map(p => (
-            <h3>{p.title}</h3>
+          {projects.map(({ title }) => (
+            <h3>{title}</h3>
           ))}
         </section>
         <section className={styles.experience}>

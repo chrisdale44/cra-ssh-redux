@@ -34,20 +34,26 @@ section h2 {
 
 .skills ul {
   list-style: none;
+  column-count: 3;
+  margin-left: 16.5%;
 }
 
 .skills li {
-  line-height: 40px;
+  line-height: 36px;
+  position: relative;
+  padding: 8px;
 }
 
 .skills li span {
   display: inline-block;
+  position: absolute;
   text-indent: -100%;
   background-repeat: no-repeat;
   background-position: top left;
-  height: 40px;
-  width: 40px;
-  background-size: 40px;
+  height: 36px;
+  width: 36px;
+  background-size: 36px;
+  left: -36px;
 }
 
 .html5 {
@@ -75,9 +81,39 @@ section h2 {
 .xbrowser {
   background-image: url("./icons/xbrowser.svg");
 }
+.photoshop {
+  background-image: url("./icons/photoshop.svg");
+}
 .git {
   background-image: url("./icons/git.svg");
 }
 .php {
   background-image: url("./icons/php.svg");
+}
+.mongodb {
+  background-image: url("./icons/mongodb.svg");
+}
+.a11y {
+  background-image: url("./icons/a11y.svg");
+}
+.sass {
+  background-image: url("./icons/sass.svg");
+}
+.mysql {
+  background-image: url("./icons/mysql.svg");
+}
+.redux {
+  background-image: url("./icons/redux.svg");
+}
+.jest {
+  background-image: url("./icons/jest.svg");
+}
+.heroku {
+  background-image: url("./icons/heroku.svg");
+}
+.babel {
+  background-image: url("./icons/babel.svg");
+}
+.docker {
+  background-image: url("./icons/docker.svg");
 }
