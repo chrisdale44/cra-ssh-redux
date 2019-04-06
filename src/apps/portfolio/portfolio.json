@@ -5,23 +5,21 @@
     { "name": "AngelList", "icon": "angellist", "url": "" },
     { "name": "GitHub", "icon": "github", "url": "" }
   ],
-  "profile": "",
+  "profile": "Ambitious and adaptable engineer with over four years experience in web development. Enjoys problem solving, writing clean code and has a strong interest in emerging mobile web and progressive web app technologies. Currently seeking a new and exciting opportunity to work with cutting edge web technologies.",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
-    { "name": "CSS Pre-processors", "icon": "sass" },
     { "name": "Javascript ES6", "icon": "javascript" },
     { "name": "React", "icon": "react" },
     { "name": "Redux", "icon": "redux" },
-    { "name": "CSS Modules", "icon": "cssmodules" },
     { "name": "Jest", "icon": "jest" },
-    { "name": "Nightwatch", "icon": "" },
-    { "name": "Cypress", "icon": "" },
     { "name": "NodeJS", "icon": "nodejs" },
     { "name": "Express", "icon": "express" },
     { "name": "MongoDB", "icon": "mongodb" },
     { "name": "Webpack", "icon": "webpack" },
     { "name": "Babel", "icon": "babel" },
+    { "name": "CSS Modules", "icon": "cssmodules" },
+    { "name": "CSS Pre-processors", "icon": "sass" },
     { "name": "MySQL", "icon": "mysql" },
     { "name": "PHP", "icon": "php" },
     { "name": "Heroku", "icon": "heroku" },
@@ -34,16 +32,29 @@
     { "name": "Git/ Github", "icon": "git" },
     { "name": "Photoshop", "icon": "photoshop" }
   ],
-  "projects": [
+  "samples": [
     {
       "title": "Photography Portfolio",
       "description": "",
-      "link": ""
+      "link": "",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "React",
+        "Redux",
+        "SSR",
+        "CSS Modules",
+        "NodeJS",
+        "Express",
+        "Cloudinary CDN",
+        "Heroku"
+      ]
     },
     {
       "title": "Poker",
       "description": "",
-      "link": ""
+      "link": "",
+      "technologies": []
     }
   ],
   "experience": [
@@ -51,108 +62,229 @@
       "role": "Associate Web Engineer",
       "company": {
         "name": "ASOS",
-        "logo": "",
-        "description": ""
+        "logo": "asos",
+        "description": "ASOS is an online fashion retailer with over 18 million active customers worldwide. As a solely online shopping experience, ASOS has a strong focus on technical innovation, performance, scalability and quality assurance."
       },
       "startDate": "2017-05-01",
-      "endDate": "present",
-      "description": ""
-    },
-    {
-      "role": "Consultant Front-End Developer",
-      "company": {
-        "name": "Creative Services",
-        "logo": "",
-        "description": ""
-      },
-      "startDate": "2015-09-01",
-      "endDate": "2017-03-01",
+      "endDate": "Present",
       "description": "",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Javascript",
+        "React",
+        "Redux",
+        "SSR",
+        "CSS Modules",
+        "SVG",
+        "Jest",
+        "NodeJS",
+        "Webpack",
+        "Babel",
+        "UML",
+        "TDD"
+      ],
       "projects": [
         {
-          "company": {
-            "name": "Three Mobile",
-            "logo": "",
-            "description": ""
-          },
-          "startDate": "2016-11-01",
-          "endDate": "2017-03-01",
+          "title": "Performance",
+          "screenshot": "",
           "description": ""
         },
         {
-          "company": {
-            "name": "Royal Navy",
-            "logo": "",
-            "description": ""
-          },
-          "startDate": "2016-05-01",
-          "endDate": "2016-11-01",
+          "title": "Accessibility",
+          "screenshot": "",
           "description": ""
         },
         {
-          "company": {
-            "name": "Home Office",
-            "logo": "",
-            "description": ""
-          },
-          "startDate": "2016-05-01",
-          "endDate": "2016-06-01",
-          "description": ""
-        },
-        {
-          "company": {
-            "name": "Vodafone",
-            "logo": "",
-            "description": ""
-          },
-          "startDate": "2015-10-01",
-          "endDate": "2016-05-01",
-          "description": ""
-        },
-        {
-          "company": {
-            "name": "Transport for London",
-            "logo": "",
-            "description": ""
-          },
-          "startDate": "2015-09-01",
-          "endDate": "2015-10-01",
+          "title": "MiniBag",
+          "screenshot": "",
           "description": ""
         }
       ]
     },
     {
+      "role": "Consultant Front-End Developer",
+      "company": {
+        "name": "Creative Services",
+        "logo": "creative",
+        "description": "Creative Services is a digital consultancy that provides UX, design and engineering expertise to a client-base of predominantly telecommunications companies, government bodies and military services and thus, has a strong focus on security, reliability, technical innovation and legacy support."
+      },
+      "startDate": "2015-09-01",
+      "endDate": "2017-03-01",
+      "description": "As a consultant for Creative Services I worked on a variety of projects, broadening my technical knowledge and giving me the experience of dealing with clients.",
+      "projects": [
+        {
+          "title": "Three Mobile BAU",
+          "logo": "",
+          "screenshot": "",
+          "startDate": "2016-11-01",
+          "endDate": "2017-03-01",
+          "description": "",
+          "technologies": ["HTML5", "CSS3", "Javascript", "Fatwire CMS", "JSP"]
+        },
+        {
+          "title": "Three Mobile Blog Micro-Site",
+          "logo": "",
+          "startDate": "2016-11-01",
+          "endDate": "2017-03-01",
+          "description": "Working as part of a micro-team for the client, I took on the task of finishing a partly-built blog site within a tight deadline. My responsibilities included:",
+          "responsibilities": [
+            "Developing remaining features",
+            "Refactoring code",
+            "Fixing over 100 outstanding defects"
+          ],
+          "technologies": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "Javascript",
+            "PHP5",
+            "Wordpress",
+            "Git"
+          ]
+        },
+        {
+          "title": "Royal Navy Web App",
+          "logo": "",
+          "screenshot": "",
+          "startDate": "2016-05-01",
+          "endDate": "2016-11-01",
+          "description": "As part of a two-person development team, I helped build a modern Web Application for the client. My responsibilities included:",
+          "responsibilities": [
+            "Building UI components and pages to match visual designs",
+            "Building a mock NodeJS API that matched the client's ICD",
+            "Building a pure HTML and CSS animated splash screen"
+          ],
+          "technologies": [
+            "HTML5",
+            "CSS3",
+            "Javascript",
+            "React",
+            "Flux",
+            "Typescript",
+            "Electron",
+            "Lodash",
+            "SASS",
+            "Gulp",
+            "Webpack",
+            "NodeJS",
+            "Express"
+          ]
+        },
+        {
+          "title": "Home Office",
+          "logo": "",
+          "screenshot": "",
+          "startDate": "2016-05-01",
+          "endDate": "2016-06-01",
+          "description": "",
+          "technologies": ["HTML5", "CSS3", "Javascript", "JSP", "IE8+"]
+        },
+        {
+          "title": "Vodafone Ready Business Index",
+          "logo": "",
+          "screenshot": "",
+          "startDate": "2015-10-01",
+          "endDate": "2016-05-01",
+          "description": "The Ready Business Index (RBI) tool is a stand-alone Web Application built for the client to promote their products and services through a series of business-related questions, followed by a tailored results page of feedback, scores and product suggestions. Approximately 20 of Vodafones international teams deployed instances of the RBI tool on their local sites and thus, it had to be well documented and easily customisable. As the core developer during the project, I had the following resonsibilities:",
+          "responsibilities": [
+            "Set up and maintain Github repositories and Heroku environments",
+            "Build the tool using the pre-chosen set of technologies to match a set of UI designs",
+            "Provide progress reports and present demonstrations of the tool to the stakeholders at each stage of the development process, including technical walk-throughs to international teams",
+            "QA the tool in different browsers and devices",
+            "Write clear and comprehensive documentation"
+          ],
+          "technologies": [
+            "HTML5",
+            "CSS3",
+            "Javascript",
+            "jQuery",
+            "VelocityJS",
+            "SVG",
+            "SurveyGizmo API",
+            "Gulp",
+            "Git",
+            "Heroku"
+          ]
+        },
+        {
+          "title": "Transport for London App Prototype",
+          "logo": "",
+          "screenshot": "",
+          "startDate": "2015-09-01",
+          "endDate": "2015-10-01",
+          "description": "Rapidly prototyped a set of UI's for TFL whilst mentoring a junior member of the team.",
+          "technologies": [
+            "HTML5",
+            "CSS3",
+            "Javascript",
+            "React",
+            "SASS",
+            "Bourbon",
+            "Neat",
+            "Git"
+          ]
+        }
+      ]
+    },
+    {
+      "startDate": "2014-10-01",
+      "endDate": "2015-06-01",
+      "description": "Hiatus taken to go travelling"
+    },
+    {
       "role": "Front-End Developer",
       "company": {
         "name": "First Utility",
-        "logo": "",
-        "description": ""
+        "logo": "first-utility",
+        "description": "First Utility is an independant gas and electricity supplier in the UK."
       },
       "startDate": "2013-06-01",
       "endDate": "2014-09-01",
-      "description": ""
+      "description": "As a front-end developer at First Utility I worked as part of an eight man team to build a fresh, rebranded, responsive version their website and user account system. The website won the utilities website of the year award 2014 and helped quadrouple First Utilities customer base to 1 million customers.",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "SASS",
+        "jQuery",
+        "Foundation",
+        "Highcharts",
+        "PHP5",
+        "mongoDB",
+        "Git"
+      ]
     },
     {
       "role": "Junior Front-End Developer",
       "company": {
         "name": "mydeco",
         "logo": "",
-        "description": ""
+        "description": "MyDeco was an entrepreneurial online marketplace for homeware and furniture that lost funding in 2013."
       },
       "startDate": "2012-09-01",
       "endDate": "2013-05-01",
-      "description": ""
+      "description": "",
+      "technologies": [
+        "HTML5",
+        "CSS3",
+        "Stylus",
+        "jQuery",
+        "Python",
+        "Jinja2",
+        "MailChimp"
+      ]
     },
     {
       "role": "Junior Full-Stack Developer",
       "company": {
         "name": "OpenBet",
         "logo": "",
-        "description": ""
+        "description": "OpenBet is a leading sportsbook and gaming software company."
       },
       "startDate": "2011-09-01",
       "endDate": "2012-05-01",
-      "description": ""
+      "description": "",
+      "technologies": ["HTML5", "CSS3", "Javascript", "TCL", "SQL"]
     },
     {
       "role": "Intern Back-End Developer",
@@ -161,19 +293,14 @@
         "logo": "",
         "description": ""
       },
-      "startDate": "",
-      "endDate": "",
+      "startDate": "2010-08-01",
+      "endDate": "2010-09-01",
       "description": "",
       "projects": [
         {
-          "company": {
-            "name": "Devon County Council",
-            "logo": "",
-            "description": ""
-          },
-          "startDate": "2010-08-01",
-          "endDate": "2010-09-01",
-          "description": ""
+          "title": "Do A Book",
+          "description": "",
+          "technologies": ["XHTML", "CSS2", "PHP", "Zend"]
         }
       ]
     }
@@ -185,7 +312,34 @@
         "degree": "Information Technology in Organisations, BSc",
         "result": "First Class with Honours",
         "description": "",
-        "societies": "Extreme sports society"
+        "societies": "Extreme sports society",
+        "technologies": [
+          "XHTML",
+          "CSS2",
+          "Javascript",
+          "OOP",
+          "XML",
+          "PHP",
+          "MySQL",
+          "C#",
+          "Operating Systems",
+          "Networks",
+          "UML",
+          "MVC",
+          "Agile"
+        ],
+        "projects": [
+          {
+            "title": "Jeff Taylor Gallery",
+            "description": "",
+            "techologies": ["XHTML", "CSS2", "PHP", "MySQL"]
+          },
+          {
+            "title": "Snake game",
+            "description": "",
+            "technologies": ["C#"]
+          }
+        ]
       }
     ],
     "school": [

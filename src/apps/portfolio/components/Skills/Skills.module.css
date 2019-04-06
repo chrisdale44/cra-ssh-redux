@@ -1,0 +1,29 @@
+@import "../../../../styles/breakpoints.css";
+@value tablet-up from "../../../../styles/breakpoints.css";
+
+.skills ul {
+  list-style: none;
+  column-count: 2;
+  margin-left: 12.5%;
+  margin-right: -12.5%;
+}
+
+@media (tablet-up) {
+  .skills ul {
+    list-style: none;
+    column-count: 3;
+    margin-left: 16.5%;
+    margin-right: 0;
+  }
+}
+
+.skills li {
+  line-height: 48px;
+  position: relative;
+  padding: 8px;
+}
+
+.skills li span {
+  position: absolute;
+  left: -50px;
+}

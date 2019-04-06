@@ -1,11 +1,25 @@
+:root {
+  --icon-size: 48px;
+  --logo-size: 100px;
+}
+
 .icon {
   display: inline-block;
   text-indent: -100%;
   background-repeat: no-repeat;
   background-position: top left;
-  height: 48px;
-  width: 48px;
-  background-size: 48px;
+  height: var(--icon-size);
+  width: var(--icon-size);
+  background-size: contain;
+}
+
+.logo {
+  display: inline-block;
+  text-indent: -100%;
+  background-repeat: no-repeat;
+  background-position: top left;
+  background-size: contain;
+  background-position: center;
 }
 
 .html5 {
@@ -91,4 +105,10 @@
 .cssmodules {
   composes: icon;
   background-image: url("./css-modules.svg");
+}
+.asos {
+  composes: logo;
+  background-image: url("./asos.svg");
+  height: 30px;
+  width: var(--logo-size);
 }

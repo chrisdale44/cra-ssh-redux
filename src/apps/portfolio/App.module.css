@@ -1,23 +1,27 @@
-@import "./icons/icons.module.css";
-@import "../../styles/breakpoints.css";
-
 header {
   display: block;
   background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 header h1 {
+  color: white;
   display: inline-block;
+  padding: 5px 30px;
+  font-size: 22px;
 }
 
 header a {
   float: right;
-  line-height: 48px;
 }
 
-.wrapper header,
-.wrapper section,
-.wrapper footer {
+header,
+section,
+footer {
   margin: 0;
   padding: 0;
 }
@@ -25,37 +29,21 @@ header a {
 h1,
 h2 {
   margin: 0;
-  padding: 5px 30px;
-  color: white;
 }
 
 section {
-  min-height: 300px;
   color: #101010;
   display: block;
 }
 
 section h2 {
-  background-color: #212121;
-}
-
-.wrapper footer {
-  color: #606060;
-}
-
-.skills ul {
-  list-style: none;
-  column-count: 3;
-  margin-left: 16.5%;
-}
-
-.skills li {
-  line-height: 48px;
   position: relative;
-  padding: 8px;
+  text-align: center;
+  font-size: 38px;
+  font-weight: normal;
+  padding: 5px 30px;
 }
 
-.skills li span {
-  position: absolute;
-  left: -50px;
+footer {
+  color: #606060;
 }

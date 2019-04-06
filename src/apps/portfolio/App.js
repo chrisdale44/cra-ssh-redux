@@ -1,7 +1,16 @@
+import "normalize.css";
 import React, { Component } from "react";
-import appStyles from "./App.module.css";
 import icons from "./icons/icons.module.css";
 import portfolio from "./portfolio.json";
+import Education from "./components/Education";
+import WorkExperience from "./components/WorkExperience";
+import Skills from "./components/Skills";
+import CodeSamples from "./components/CodeSamples";
+import Profile from "./components/Profile";
+import Interests from "./components/Interests";
+import Header from "./components/Header";
+import appStyles from "./App.module.css";
+
 const styles = { ...appStyles, ...icons };
 
 class Portfolio extends Component {
@@ -11,88 +20,21 @@ class Portfolio extends Component {
       socialLinks,
       profile,
       skills,
-      projects,
+      samples,
       experience,
       education,
       interests
     } = portfolio;
+    console.log(education);
     return (
-      <div className={styles.wrapper}>
-        <header>
-          <h1>{name}</h1>
-          {socialLinks.map(({ name, icon, url }) => (
-            <a href={url}>
-              <img src={icon} alt={name} />
-            </a>
-          ))}
-        </header>
-        <section className={styles.profile}>
-          <h2>Profile</h2>
-          <p>{profile}</p>
-        </section>
-        <section className={styles.skills}>
-          <h2>Skills</h2>
-          <ul>
-            {skills.map(({ name, icon }) => (
-              <li>
-                <span className={styles[icon]} />
-                {name}
-              </li>
-            ))}
-          </ul>
-        </section>
-        <section className={styles.projects}>
-          <h2>Personal Projects</h2>
-          {projects.map(({ title }) => (
-            <h3>{title}</h3>
-          ))}
-        </section>
-        <section className={styles.experience}>
-          <h2>Work Experience</h2>
-          {experience.map(({ role, company, projects }) => (
-            <div className={styles.jobContainer}>
-              <h3>{role}</h3>
-              <h4>{company.name}</h4>
-              {projects &&
-                projects.map(({ company }) => (
-                  <div className={styles.jobContainer}>
-                    <h4>{company.name}</h4>
-                  </div>
-                ))}
-            </div>
-          ))}
-        </section>
-        <section className={styles.education}>
-          <h2>Education</h2>
-          {education.university.map(u => (
-            <div className={styles.uni}>
-              <h3>{u.name}</h3>
-              <h4>{u.degree}</h4>
-            </div>
-          ))}
-          {education.school.map(({ name, qualifications }) => (
-            <div className={styles.school}>
-              <h3>{name}</h3>
-              {qualifications &&
-                qualifications.map(({ name, subjects }) => (
-                  <div className={styles.qualification}>
-                    <h4>{name}</h4>
-                    {subjects.map(({ title, result }) => (
-                      <p>
-                        {title} - {result}
-                      </p>
-                    ))}
-                  </div>
-                ))}
-            </div>
-          ))}
-        </section>
-        <section className={styles.interests}>
-          <h2>Interests</h2>
-          {interests.map(({ title }) => (
-            <h3>{title}</h3>
-          ))}
-        </section>
+      <div>
+        <Header name={name} socialLinks={socialLinks} />
+        <Profile profile={profile} />
+        <Skills skills={skills} />
+        <CodeSamples samples={samples} />
+        <WorkExperience experience={experience} />
+        <Education education={education} />
+        <Interests interests={interests} />
         <footer>{String.fromCharCode(169)} Christopher Dale 2019</footer>
       </div>
     );
