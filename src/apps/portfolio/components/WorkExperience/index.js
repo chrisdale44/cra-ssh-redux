@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Slider from "react-slick";
 import { dateRange } from "./helpers";
 import componentStyles from "./WorkExperience.module.css";
 import icons from "../../icons/icons.module.css";
@@ -7,6 +8,9 @@ const styles = { ...componentStyles, ...icons };
 class WorkExperience extends Component {
   render() {
     const { experience } = this.props;
+    const settings = {
+      dots: true
+    };
     return (
       <section>
         <h2>Work Experience</h2>
@@ -52,33 +56,35 @@ class WorkExperience extends Component {
                 {technologies && technologies.map(t => t + ", ")}
               </span>
               {projects && <h3>Projects</h3>}
-              {projects &&
-                projects.map(
-                  ({
-                    title,
-                    startDate,
-                    endDate,
-                    description,
-                    responsibilities,
-                    technologies
-                  }) => (
-                    <div className={styles.projectContainer}>
-                      <h4>{title}</h4>
-                      {dateRange(startDate, endDate)}
-                      <p>{description}</p>
-                      {responsibilities && (
-                        <ul>
-                          {responsibilities.map(responsibility => (
-                            <li>{responsibility}</li>
-                          ))}
-                        </ul>
-                      )}
-                      <span>
-                        {technologies && technologies.map(t => t + ", ")}
-                      </span>
-                    </div>
-                  )
-                )}
+              <Slider {...settings}>
+                {projects &&
+                  projects.map(
+                    ({
+                      title,
+                      startDate,
+                      endDate,
+                      description,
+                      responsibilities,
+                      technologies
+                    }) => (
+                      <div className={styles.projectContainer}>
+                        <h4>{title}</h4>
+                        {dateRange(startDate, endDate)}
+                        <p>{description}</p>
+                        {responsibilities && (
+                          <ul>
+                            {responsibilities.map(responsibility => (
+                              <li>{responsibility}</li>
+                            ))}
+                          </ul>
+                        )}
+                        <span>
+                          {technologies && technologies.map(t => t + ", ")}
+                        </span>
+                      </div>
+                    )
+                  )}
+              </Slider>
             </article>
           )
         )}
