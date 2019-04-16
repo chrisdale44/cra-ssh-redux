@@ -54,5 +54,7 @@ section h2 {
 }
 
 footer {
+  margin: 10px auto;
+  text-align: center;
   color: #606060;
 }

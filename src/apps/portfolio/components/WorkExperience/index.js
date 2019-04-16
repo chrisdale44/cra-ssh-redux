@@ -66,10 +66,12 @@ class WorkExperience extends Component {
                         endDate,
                         description,
                         responsibilities,
-                        technologies
+                        technologies,
+                        logo
                       }) => (
                         <div className={styles.slideContainer}>
                           <div className={styles.slide}>
+                            {logo && <span className={styles[logo]} />}
                             <h4>{title}</h4>
                             {dateRange(startDate, endDate)}
                             <p>{description}</p>

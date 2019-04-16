@@ -115,7 +115,7 @@
       "projects": [
         {
           "title": "Three Mobile BAU",
-          "logo": "",
+          "logo": "three",
           "screenshot": "",
           "startDate": "2016-11-01",
           "endDate": "2017-03-01",
@@ -124,7 +124,7 @@
         },
         {
           "title": "Three Mobile Blog Micro-Site",
-          "logo": "",
+          "logo": "three",
           "startDate": "2016-11-01",
           "endDate": "2017-03-01",
           "description": "Working as part of a micro-team for the client, I took on the task of finishing a partly-built blog site within a tight deadline. My responsibilities included:",
@@ -145,7 +145,7 @@
         },
         {
           "title": "Royal Navy Web App",
-          "logo": "",
+          "logo": "royal-navy",
           "screenshot": "",
           "startDate": "2016-05-01",
           "endDate": "2016-11-01",
@@ -173,7 +173,7 @@
         },
         {
           "title": "Home Office",
-          "logo": "",
+          "logo": "home-office",
           "screenshot": "",
           "startDate": "2016-05-01",
           "endDate": "2016-06-01",
@@ -182,7 +182,7 @@
         },
         {
           "title": "Vodafone Ready Business Index",
-          "logo": "",
+          "logo": "vodafone",
           "screenshot": "",
           "startDate": "2015-10-01",
           "endDate": "2016-05-01",
@@ -209,7 +209,7 @@
         },
         {
           "title": "Transport for London App Prototype",
-          "logo": "",
+          "logo": "tfl",
           "screenshot": "",
           "startDate": "2015-09-01",
           "endDate": "2015-10-01",
@@ -289,8 +289,8 @@
     {
       "role": "Intern Back-End Developer",
       "company": {
-        "name": "Websites Designed",
-        "logo": "",
+        "name": "Verve Media",
+        "logo": "verve",
         "description": ""
       },
       "startDate": "2010-08-01",
@@ -299,6 +299,7 @@
       "projects": [
         {
           "title": "Do A Book",
+          "logo": "devon",
           "description": "",
           "technologies": ["XHTML", "CSS2", "PHP", "Zend"]
         }
@@ -309,6 +310,7 @@
     "university": [
       {
         "name": "University of Southampton",
+        "logo": "soton",
         "degree": "Information Technology in Organisations, BSc",
         "result": "First Class with Honours",
         "description": "",
@@ -345,6 +347,7 @@
     "school": [
       {
         "name": "Reigate Grammar School",
+        "logo": "rgs",
         "qualifications": [
           {
             "name": "A Level",
