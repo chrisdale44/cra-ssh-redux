@@ -20,6 +20,8 @@
   background-position: top left;
   background-size: contain;
   background-position: center;
+  height: 64px;
+  width: 64px;
 }
 
 .html5 {
@@ -115,8 +117,6 @@
 .first-utility {
   composes: logo;
   background-image: url("./first-utility.svg");
-  height: 64px;
-  width: 64px;
 }
 .mydeco {
   composes: logo;
@@ -127,57 +127,41 @@
 .openbet {
   composes: logo;
   background-image: url("./openbet.svg");
-  height: 64px;
-  width: 64px;
 }
 
 .creative {
   composes: logo;
   background-image: url("./creative.svg");
-  height: 64px;
-  width: 64px;
 }
 
 .home-office {
   composes: logo;
   background-image: url("./home-office.png");
-  height: 64px;
-  width: 64px;
 }
 
 .tfl {
   composes: logo;
   background-image: url("./tfl.svg");
-  height: 64px;
-  width: 64px;
 }
 
 .three {
   composes: logo;
   background-image: url("./three.svg");
-  height: 64px;
-  width: 64px;
 }
 
 .vodafone {
   composes: logo;
   background-image: url("./vodafone.svg");
-  height: 64px;
-  width: 64px;
 }
 
 .royal-navy {
   composes: logo;
   background-image: url("./royal-navy.png");
-  height: 64px;
-  width: 64px;
 }
 
 .rgs {
   composes: logo;
   background-image: url("./rgs.svg");
-  height: 64px;
-  width: 64px;
 }
 
 .soton {
@@ -197,6 +181,4 @@
 .verve {
   composes: logo;
   background-image: url("./verve.svg");
-  height: 64px;
-  width: 64px;
 }
