@@ -1,6 +1,6 @@
 :root {
   --icon-size: 48px;
-  --logo-size: 100px;
+  --logo-size: 112px;
 }
 
 .icon {
@@ -109,6 +109,24 @@
 .asos {
   composes: logo;
   background-image: url("./asos.svg");
-  height: 30px;
+  height: 40px;
   width: var(--logo-size);
+}
+.first-utility {
+  composes: logo;
+  background-image: url("./first-utility.svg");
+  height: 64px;
+  width: 64px;
+}
+.mydeco {
+  composes: logo;
+  background-image: url("./mydeco.svg");
+  height: 40px;
+  width: 120px;
+}
+.openbet {
+  composes: logo;
+  background-image: url("./openbet.svg");
+  height: 64px;
+  width: 64px;
 }
