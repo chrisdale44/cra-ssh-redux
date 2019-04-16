@@ -1,0 +1,20 @@
+header {
+  display: block;
+  background-color: #000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+header h1 {
+  color: white;
+  display: inline-block;
+  padding: 10px 30px;
+  font-size: 22px;
+}
+
+header a {
+  float: right;
+}

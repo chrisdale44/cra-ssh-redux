@@ -5,7 +5,7 @@
     { "name": "AngelList", "icon": "angellist", "url": "" },
     { "name": "GitHub", "icon": "github", "url": "" }
   ],
-  "profile": "Ambitious and adaptable engineer with six years experience in web development. Enjoys problem solving, writing clean code and has a strong interest in emerging mobile web and progressive web app technologies. Currently seeking a new and exciting opportunity to work with cutting edge web technologies.",
+  "profile": "Ambitious and adaptable engineer with six years experience in web development. Enjoys problem solving, writing clean code and has a strong interest in emerging mobile web technologies. Currently seeking greater responsibility and new, exciting projects to work on.",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
@@ -258,7 +258,7 @@
       "role": "Junior Front-End Developer",
       "company": {
         "name": "mydeco",
-        "logo": "",
+        "logo": "mydeco",
         "description": "MyDeco was an entrepreneurial online marketplace for homeware and furniture that lost funding in 2013."
       },
       "startDate": "2012-09-01",
@@ -278,7 +278,7 @@
       "role": "Junior Full-Stack Developer",
       "company": {
         "name": "OpenBet",
-        "logo": "",
+        "logo": "openbet",
         "description": "OpenBet is a leading sportsbook and gaming software company."
       },
       "startDate": "2011-09-01",

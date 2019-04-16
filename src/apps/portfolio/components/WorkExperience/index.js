@@ -56,35 +56,39 @@ class WorkExperience extends Component {
                 {technologies && technologies.map(t => t + ", ")}
               </span>
               {projects && <h3>Projects</h3>}
-              <Slider {...settings}>
-                {projects &&
-                  projects.map(
-                    ({
-                      title,
-                      startDate,
-                      endDate,
-                      description,
-                      responsibilities,
-                      technologies
-                    }) => (
-                      <div className={styles.projectContainer}>
-                        <h4>{title}</h4>
-                        {dateRange(startDate, endDate)}
-                        <p>{description}</p>
-                        {responsibilities && (
-                          <ul>
-                            {responsibilities.map(responsibility => (
-                              <li>{responsibility}</li>
-                            ))}
-                          </ul>
-                        )}
-                        <span>
-                          {technologies && technologies.map(t => t + ", ")}
-                        </span>
-                      </div>
-                    )
-                  )}
-              </Slider>
+              <div class={styles.sliderContainer}>
+                <Slider {...settings}>
+                  {projects &&
+                    projects.map(
+                      ({
+                        title,
+                        startDate,
+                        endDate,
+                        description,
+                        responsibilities,
+                        technologies
+                      }) => (
+                        <div className={styles.slideContainer}>
+                          <div className={styles.slide}>
+                            <h4>{title}</h4>
+                            {dateRange(startDate, endDate)}
+                            <p>{description}</p>
+                            {responsibilities && (
+                              <ul>
+                                {responsibilities.map(responsibility => (
+                                  <li>{responsibility}</li>
+                                ))}
+                              </ul>
+                            )}
+                            <span>
+                              {technologies && technologies.map(t => t + ", ")}
+                            </span>
+                          </div>
+                        </div>
+                      )
+                    )}
+                </Slider>
+              </div>
             </article>
           )
         )}

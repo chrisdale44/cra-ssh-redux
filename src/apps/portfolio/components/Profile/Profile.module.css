@@ -1,6 +1,10 @@
 .profile {
-  padding: 20px;
-  margin: 45px auto 10px auto;
-  max-width: 600px;
+  margin: 80px auto 10px auto;
+  max-width: 660px;
   text-align: justify;
+}
+
+.profile p {
+  padding-left: 20px;
+  padding-right: 20px;
 }

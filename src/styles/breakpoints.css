@@ -1,8 +1,4 @@
-/* :root {
-    --small: 320px;
-    --medium: 720px;
-    --large: 1080px;
-} */
 @value mobile-up: min-width: 480px;
 @value tablet-up: min-width: 720px;
 @value desktop-up: min-width: 975px;
+@value max-width: min-width: 1200px;

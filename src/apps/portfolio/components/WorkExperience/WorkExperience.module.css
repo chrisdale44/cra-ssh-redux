@@ -1,10 +1,6 @@
-@import "~slick-carousel/slick/slick.css";
-@import "~slick-carousel/slick/slick-theme.css";
-
 .jobContainer {
-  margin: 20px;
-  padding: 20px;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  max-width: 1200px;
+  margin: 30px auto 60px auto;
 }
 
 .companyDetails {
@@ -19,4 +15,25 @@
 .dateRange,
 .technologies {
   color: #606060;
+}
+
+.sliderContainer {
+  margin: 20px 40px;
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); */
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
+.slideContainer {
+  /* background-color: #eee; */
+  height: 240px;
+  overflow: hidden;
+}
+
+.slide {
+  margin: 20px;
+}
+
+.slide h4 {
+  text-align: center;
+  margin: 0;
 }
