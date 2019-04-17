@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import styles from "./Header.module.css";
+import componentStyles from "./Header.module.css";
+import icons from "../../icons/icons.module.css";
+const styles = { ...componentStyles, ...icons };
 
 class Header extends Component {
   render() {
@@ -7,11 +9,11 @@ class Header extends Component {
     return (
       <header>
         <h1>{name}</h1>
-        {socialLinks.map(({ name, icon, url }, i) => (
-          <a href={url} key={i}>
-            <img src={icon} alt={name} />
-          </a>
-        ))}
+        <div className={styles.socialLinks}>
+          {socialLinks.map(({ name, icon, url }, i) => (
+            <a href={url} key={i} className={styles[icon]} aria-label={name} />
+          ))}
+        </div>
       </header>
     );
   }

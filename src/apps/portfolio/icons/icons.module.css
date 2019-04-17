@@ -1,5 +1,5 @@
 :root {
-  --icon-size: 48px;
+  --icon-size: 36px;
   --logo-size: 112px;
 }
 
@@ -22,6 +22,27 @@
   background-position: center;
   height: 64px;
   width: 64px;
+}
+
+.github {
+  composes: icon;
+  background-image: url("./github.svg");
+  height: 32px;
+  width: 32px;
+}
+
+.angellist {
+  composes: icon;
+  background-image: url("./angellist.svg");
+  height: 32px;
+  width: 32px;
+}
+
+.linkedin {
+  composes: icon;
+  background-image: url("./linkedin.svg");
+  height: 32px;
+  width: 32px;
 }
 
 .html5 {
@@ -106,7 +127,9 @@
 }
 .cssmodules {
   composes: icon;
-  background-image: url("./css-modules.svg");
+  background-image: url("./cssmodules.png");
+  height: 40px;
+  width: 40px;
 }
 .asos {
   composes: logo;
