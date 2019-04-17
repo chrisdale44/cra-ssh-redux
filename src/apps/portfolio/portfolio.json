@@ -5,7 +5,7 @@
     { "name": "AngelList", "icon": "angellist", "url": "" },
     { "name": "GitHub", "icon": "github", "url": "" }
   ],
-  "profile": "Ambitious and adaptable Web engineer with six years experience. Enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking greater responsibility and new, exciting projects to work on.",
+  "profile": "Ambitious and adaptable Web engineer with six years industry experience. Enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking greater responsibility and new, exciting projects to work on.",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
@@ -111,71 +111,10 @@
       },
       "startDate": "2015-09-01",
       "endDate": "2017-03-01",
-      "description": "As a consultant for Creative Services I worked on a variety of projects, broadening my technical expertise and giving me the experience of working for clients.",
+      "description": "As a consultant for Creative Services I worked on a variety of projects, broadening my technical expertise and giving me experience of working closely with a range of clients.",
       "projects": [
         {
-          "title": "Three Mobile BAU",
-          "logo": "three",
-          "screenshot": "",
-          "description": "",
-          "technologies": ["HTML5", "CSS3", "Javascript", "Fatwire CMS", "JSP"]
-        },
-        {
-          "title": "Three Mobile Blog",
-          "logo": "three",
-          "description": "I was given the responsibility of finishing a partly-built blog site for Three Mobile within a tight deadline. My responsibilities included:",
-          "responsibilities": [
-            "Developing remaining features",
-            "Refactoring code",
-            "Fixing outstanding defects"
-          ],
-          "technologies": [
-            "HTML5",
-            "CSS3",
-            "SASS",
-            "Javascript",
-            "PHP5",
-            "Wordpress",
-            "Git"
-          ]
-        },
-        {
-          "title": "Royal Navy Web App",
-          "logo": "royal-navy",
-          "screenshot": "",
-          "description": "As part of a two-person development team, I helped build a modern Web Application for the client. My responsibilities included:",
-          "responsibilities": [
-            "Building UI components and pages to match visual designs",
-            "Building a mock NodeJS API that matched the client's ICD",
-            "Building a lightweight animated splash screen"
-          ],
-          "technologies": [
-            "HTML5",
-            "CSS3",
-            "Javascript",
-            "React",
-            "Flux",
-            "Typescript",
-            "Electron",
-            "Lodash",
-            "SASS",
-            "Gulp",
-            "Webpack",
-            "NodeJS",
-            "Express"
-          ]
-        },
-        {
-          "title": "Home Office",
-          "logo": "home-office",
-          "screenshot": "",
-          "startDate": "2016-05-01",
-          "endDate": "2016-06-01",
-          "description": "",
-          "technologies": ["HTML5", "CSS3", "Javascript", "JSP", "IE8+"]
-        },
-        {
-          "title": "Vodafone Ready Business Index",
+          "title": "Vodafone: Ready Business Index",
           "logo": "vodafone",
           "screenshot": "",
           "description": "The Ready Business Index (RBI) tool is a stand-alone Web Application built for the client to promote their products and services through a series of business-related questions, followed by a tailored results page of feedback, scores and product suggestions. Approximately 20 of Vodafones international teams deployed instances of the RBI tool on their local sites and thus, it had to be well documented and easily customisable. As the core developer during the project, I had the following resonsibilities:",
@@ -200,18 +139,47 @@
           ]
         },
         {
-          "title": "Transport for London App Prototype",
-          "logo": "tfl",
+          "title": "Royal Navy: Web App",
+          "logo": "royal-navy",
           "screenshot": "",
-          "description": "Rapidly prototyped a set of UI's for TFL whilst mentoring a junior member of the team.",
+          "description": "As part of a two-person development team, I helped build a modern Web Application for the client. My responsibilities included:",
+          "responsibilities": [
+            "Building UI components and pages to match visual designs",
+            "Building an Express API that mocked the client's ICD",
+            "Building a lightweight animated splash screen"
+          ],
           "technologies": [
             "HTML5",
             "CSS3",
             "Javascript",
             "React",
+            "Flux",
+            "Typescript",
+            "Electron",
+            "Lodash",
             "SASS",
-            "Bourbon",
-            "Neat",
+            "Gulp",
+            "Webpack",
+            "NodeJS",
+            "Express"
+          ]
+        },
+        {
+          "title": "Three: Blog Hub",
+          "logo": "three",
+          "description": "I was given the responsibility of finishing a partly-built blog site for Three Mobile within a tight deadline. My responsibilities included:",
+          "responsibilities": [
+            "Developing remaining features",
+            "Refactoring code",
+            "Fixing outstanding defects"
+          ],
+          "technologies": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "Javascript",
+            "PHP",
+            "Wordpress",
             "Git"
           ]
         }
@@ -231,7 +199,7 @@
       },
       "startDate": "2013-06-01",
       "endDate": "2014-09-01",
-      "description": "As a front-end developer at First Utility I worked as part of an eight man team to build a fresh, rebranded, responsive version their website and user account system. The website won the 'Utilities Website of the Year' award in 2014 and helped quadrouple First Utility's customer base to one million customers.",
+      "description": "As a front-end developer at First Utility my responsibilities included...",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -239,12 +207,17 @@
         "jQuery",
         "Foundation",
         "Highcharts",
-        "PHP5",
+        "PHP",
         "mongoDB",
         "RESTful API",
         "Git"
       ],
       "projects": [
+        {
+          "title": "Website rebuild",
+          "screenshot": "",
+          "description": "I worked as part of an eight man team to build a fresh, rebranded, responsive version their website and user account system. The website won the 'Utility Website of the Year' award in 2014 and helped quadrouple First Utility's customer base to one million customers."
+        },
         {
           "title": "Usage graphs",
           "screenshot": "",

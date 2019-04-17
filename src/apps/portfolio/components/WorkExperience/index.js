@@ -14,6 +14,7 @@ class WorkExperience extends Component {
     const settings = {
       dots: true,
       slidesToShow: 2,
+      slidesToScroll: 2,
       initialSlide: 0,
       responsive: [
         {
