@@ -299,7 +299,7 @@
 
           "logo": "devon",
           "screenshot": "",
-          "description": "During my internship I worked on a project for Devon County Council that aimed to encourage creative writing amongst children. The website I helped to build allowed children to download a set of illustrations by a local artist, write their own story to the pictures, and then upload their book to the website for others to read and upvote. I was given the responsibility of building the majority of the back-end system for the website, including relational database design and the development of a basic Content Management System that allowed administrators to login and maintain website content and book submissions.",
+          "description": "During my internship at Verve Media I worked on a project for Devon County Council that aimed to encourage creative writing amongst children. The Do A Book website allowed children to download a set of illustrations by a local artist, write their own story to the pictures, and then upload their book to the website for others to read and upvote. I was given the responsibility of building the majority of the back-end system for the website, including relational database design and the development of a basic Content Management System that allowed administrators to login and maintain website content and book submissions.",
           "technologies": ["XHTML", "CSS", "PHP", "MySQL", "Zend"]
         }
       ]
