@@ -1,5 +1,6 @@
 @import "../../../../styles/breakpoints.css";
 @value tablet-up from "../../../../styles/breakpoints.css";
+@value desktop-up from "../../../../styles/breakpoints.css";
 
 .skills ul {
   list-style: none;
@@ -17,8 +18,18 @@
   }
 }
 
+@media (desktop-up) {
+  .skills ul {
+    list-style: none;
+    column-count: 4;
+    margin-left: 12.5%;
+    margin-right: 0;
+  }
+}
+
 .skills li {
-  line-height: 48px;
+  font-size: 14px;
+  line-height: 36px;
   position: relative;
   padding: 8px;
 }

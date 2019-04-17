@@ -5,7 +5,7 @@
     { "name": "AngelList", "icon": "angellist", "url": "" },
     { "name": "GitHub", "icon": "github", "url": "" }
   ],
-  "profile": "Ambitious and adaptable engineer with six years experience in web development. Enjoys problem solving, writing clean code and has a strong interest in emerging mobile web technologies. Currently seeking greater responsibility and new, exciting projects to work on.",
+  "profile": "Ambitious and adaptable Web engineer with six years experience. Enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking greater responsibility and new, exciting projects to work on.",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
@@ -67,7 +67,7 @@
       },
       "startDate": "2017-05-01",
       "endDate": "Present",
-      "description": "",
+      "description": "My role at ASOS...",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -107,31 +107,27 @@
       "company": {
         "name": "Creative Services",
         "logo": "creative",
-        "description": "Creative Services is a digital consultancy that provides UX, design and engineering expertise to a client-base of predominantly telecommunications companies, government bodies and military services and thus, has a strong focus on security, reliability, technical innovation and legacy support."
+        "description": "Creative Services is a digital consultancy that provides UX, design and engineering expertise to a client-base of predominantly telecommunications companies, government bodies and military services and thus, has a strong focus on security and reliability, as well as technical innovation and legacy support."
       },
       "startDate": "2015-09-01",
       "endDate": "2017-03-01",
-      "description": "As a consultant for Creative Services I worked on a variety of projects, broadening my technical knowledge and giving me the experience of dealing with clients.",
+      "description": "As a consultant for Creative Services I worked on a variety of projects, broadening my technical expertise and giving me the experience of working for clients.",
       "projects": [
         {
           "title": "Three Mobile BAU",
           "logo": "three",
           "screenshot": "",
-          "startDate": "2016-11-01",
-          "endDate": "2017-03-01",
           "description": "",
           "technologies": ["HTML5", "CSS3", "Javascript", "Fatwire CMS", "JSP"]
         },
         {
-          "title": "Three Mobile Blog Micro-Site",
+          "title": "Three Mobile Blog",
           "logo": "three",
-          "startDate": "2016-11-01",
-          "endDate": "2017-03-01",
-          "description": "Working as part of a micro-team for the client, I took on the task of finishing a partly-built blog site within a tight deadline. My responsibilities included:",
+          "description": "I was given the responsibility of finishing a partly-built blog site for Three Mobile within a tight deadline. My responsibilities included:",
           "responsibilities": [
             "Developing remaining features",
             "Refactoring code",
-            "Fixing over 100 outstanding defects"
+            "Fixing outstanding defects"
           ],
           "technologies": [
             "HTML5",
@@ -147,13 +143,11 @@
           "title": "Royal Navy Web App",
           "logo": "royal-navy",
           "screenshot": "",
-          "startDate": "2016-05-01",
-          "endDate": "2016-11-01",
           "description": "As part of a two-person development team, I helped build a modern Web Application for the client. My responsibilities included:",
           "responsibilities": [
             "Building UI components and pages to match visual designs",
             "Building a mock NodeJS API that matched the client's ICD",
-            "Building a pure HTML and CSS animated splash screen"
+            "Building a lightweight animated splash screen"
           ],
           "technologies": [
             "HTML5",
@@ -184,8 +178,6 @@
           "title": "Vodafone Ready Business Index",
           "logo": "vodafone",
           "screenshot": "",
-          "startDate": "2015-10-01",
-          "endDate": "2016-05-01",
           "description": "The Ready Business Index (RBI) tool is a stand-alone Web Application built for the client to promote their products and services through a series of business-related questions, followed by a tailored results page of feedback, scores and product suggestions. Approximately 20 of Vodafones international teams deployed instances of the RBI tool on their local sites and thus, it had to be well documented and easily customisable. As the core developer during the project, I had the following resonsibilities:",
           "responsibilities": [
             "Set up and maintain Github repositories and Heroku environments",
@@ -211,8 +203,6 @@
           "title": "Transport for London App Prototype",
           "logo": "tfl",
           "screenshot": "",
-          "startDate": "2015-09-01",
-          "endDate": "2015-10-01",
           "description": "Rapidly prototyped a set of UI's for TFL whilst mentoring a junior member of the team.",
           "technologies": [
             "HTML5",
@@ -241,7 +231,7 @@
       },
       "startDate": "2013-06-01",
       "endDate": "2014-09-01",
-      "description": "As a front-end developer at First Utility I worked as part of an eight man team to build a fresh, rebranded, responsive version their website and user account system. The website won the utilities website of the year award 2014 and helped quadrouple First Utilities customer base to 1 million customers.",
+      "description": "As a front-end developer at First Utility I worked as part of an eight man team to build a fresh, rebranded, responsive version their website and user account system. The website won the 'Utilities Website of the Year' award in 2014 and helped quadrouple First Utility's customer base to one million customers.",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -251,7 +241,15 @@
         "Highcharts",
         "PHP5",
         "mongoDB",
+        "RESTful API",
         "Git"
+      ],
+      "projects": [
+        {
+          "title": "Usage graphs",
+          "screenshot": "",
+          "description": "Built an interactive graph using Highcharts with data from an API, including caching."
+        }
       ]
     },
     {
@@ -259,7 +257,7 @@
       "company": {
         "name": "mydeco",
         "logo": "mydeco",
-        "description": "MyDeco was an entrepreneurial online marketplace for homeware and furniture that lost funding in 2013."
+        "description": "MyDeco was a small start-up company that provided an online marketplace for homeware and furniture."
       },
       "startDate": "2012-09-01",
       "endDate": "2013-05-01",
@@ -291,17 +289,18 @@
       "company": {
         "name": "Verve Media",
         "logo": "verve",
-        "description": ""
+        "description": "Verve Media was a small website design and development agency that I interned for between my second and third year at university."
       },
       "startDate": "2010-08-01",
       "endDate": "2010-09-01",
-      "description": "",
       "projects": [
         {
           "title": "Do A Book",
+
           "logo": "devon",
-          "description": "",
-          "technologies": ["XHTML", "CSS2", "PHP", "Zend"]
+          "screenshot": "",
+          "description": "During my internship I worked on a project for Devon County Council that aimed to encourage creative writing amongst children. The website I helped to build allowed children to download a set of illustrations by a local artist, write their own story to the pictures, and then upload their book to the website for others to read and upvote. I was given the responsibility of building the majority of the back-end system for the website, including relational database design and the development of a basic Content Management System that allowed administrators to login and maintain website content and book submissions.",
+          "technologies": ["XHTML", "CSS", "PHP", "MySQL", "Zend"]
         }
       ]
     }
@@ -386,10 +385,6 @@
     },
     {
       "title": "Photography",
-      "description": ""
-    },
-    {
-      "title": "Film Making",
       "description": ""
     }
   ]
