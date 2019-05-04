@@ -99,6 +99,11 @@
           "title": "MiniBag",
           "screenshot": "",
           "description": ""
+        },
+        {
+          "title": "Hackathon winners",
+          "screenshot": "",
+          "description": ""
         }
       ]
     },
@@ -111,18 +116,18 @@
       },
       "startDate": "2015-09-01",
       "endDate": "2017-03-01",
-      "description": "As a consultant for Creative Services I worked on a variety of projects, broadening my technical expertise and giving me experience of working closely with a range of clients.",
+      "description": "As a consultant for Creative Services I worked on a variety of projects. This broadened my technical expertise and gave me the experience of working with a range of clients.",
       "projects": [
         {
-          "title": "Vodafone: Ready Business Index",
+          "title": "Vodafone: Ready Business",
           "logo": "vodafone",
-          "screenshot": "",
-          "description": "The Ready Business Index (RBI) tool is a stand-alone Web Application built for the client to promote their products and services through a series of business-related questions, followed by a tailored results page of feedback, scores and product suggestions. Approximately 20 of Vodafones international teams deployed instances of the RBI tool on their local sites and thus, it had to be well documented and easily customisable. As the core developer during the project, I had the following resonsibilities:",
+          "screenshot": "./images/ready-business.jpg",
+          "description": "The Ready Business project was a promotional tool that consisted of a set of survey questions, followed by an interactive results page of tailored feedback, scores and product suggestions. The tool was deployed by approx. 20 of Vodafones' international teams and thus, it had to be well documented and easily customisable. As the core developer during the project, I had the following resonsibilities:",
           "responsibilities": [
             "Set up and maintain Github repositories and Heroku environments",
             "Build the tool using the pre-chosen set of technologies to match a set of UI designs",
             "Provide progress reports and present demonstrations of the tool to the stakeholders at each stage of the development process, including technical walk-throughs to international teams",
-            "QA the tool in different browsers and devices",
+            "QA the tool across different browsers and devices",
             "Write clear and comprehensive documentation"
           ],
           "technologies": [
@@ -141,12 +146,12 @@
         {
           "title": "Royal Navy: Web App",
           "logo": "royal-navy",
-          "screenshot": "",
-          "description": "As part of a two-person development team, I helped build a modern Web Application for the client. My responsibilities included:",
+          "screenshot": "./images/maritime.jpg",
+          "description": "As part of a two-person development team, I helped build a React App for the client. My responsibilities included:",
           "responsibilities": [
-            "Building UI components and pages to match visual designs",
-            "Building an Express API that mocked the client's ICD",
-            "Building a lightweight animated splash screen"
+            "Build UI components and pages to match visual designs",
+            "Build an Express API that mocked the client's ICD",
+            "Build a lightweight animated splash screen"
           ],
           "technologies": [
             "HTML5",
@@ -157,7 +162,6 @@
             "Typescript",
             "Electron",
             "Lodash",
-            "SASS",
             "Gulp",
             "Webpack",
             "NodeJS",
@@ -165,13 +169,14 @@
           ]
         },
         {
-          "title": "Three: Blog Hub",
+          "title": "Three Blog Website",
           "logo": "three",
-          "description": "I was given the responsibility of finishing a partly-built blog site for Three Mobile within a tight deadline. My responsibilities included:",
+          "screenshot": "./images/three-hub.jpg",
+          "description": "I was given the task of finishing a partly-built blog site for Three within a tight deadline. My responsibilities included:",
           "responsibilities": [
-            "Developing remaining features",
-            "Refactoring code",
-            "Fixing outstanding defects"
+            "Develop remaining features, including the Load More button, TL;DR switch and an animated GIF pauser",
+            "Tidy up the codebase and fix any outstanding defects",
+            "Make the UI match the responsive designs pixel-perfectly"
           ],
           "technologies": [
             "HTML5",
@@ -199,7 +204,7 @@
       },
       "startDate": "2013-06-01",
       "endDate": "2014-09-01",
-      "description": "As a front-end developer at First Utility my responsibilities included...",
+      "description": "As a front-end developer at First Utility my responsibilities included... overnight deployments using Jenkins",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -210,7 +215,8 @@
         "PHP",
         "mongoDB",
         "RESTful API",
-        "Git"
+        "Git",
+        "Jenkins"
       ],
       "projects": [
         {
@@ -268,11 +274,16 @@
       "endDate": "2010-09-01",
       "projects": [
         {
-          "title": "Do A Book",
+          "title": "Do A Book Website",
 
           "logo": "devon",
-          "screenshot": "",
-          "description": "During my internship at Verve Media I worked on a project for Devon County Council that aimed to encourage creative writing amongst children. The Do A Book website allowed children to download a set of illustrations by a local artist, write their own story to the pictures, and then upload their book to the website for others to read and upvote. I was given the responsibility of building the majority of the back-end system for the website, including relational database design and the development of a basic Content Management System that allowed administrators to login and maintain website content and book submissions.",
+          "screenshot": "./images/doabook.jpg",
+          "description": "During my internship at Verve Media I worked on a project for Devon County Council that aimed to encourage creative writing amongst children. The Do A Book website allowed children to download a set of illustrations by a local artist, write their own story to the pictures, and then upload their book for others to read and vote on. My responsibilities included ",
+          "responsibilities": [
+            "Write the server-side code for the website",
+            "Design and build the relational database",
+            "Build a simple Content Management System that allowed administrators to login and maintain website content and uploaded books"
+          ],
           "technologies": ["XHTML", "CSS", "PHP", "MySQL", "Zend"]
         }
       ]

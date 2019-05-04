@@ -3,50 +3,6 @@
   margin: 30px auto 60px auto;
 }
 
-.heading {
-  display: flex;
-}
-
-.icon {
-  flex: 0;
-}
-
-.mainDetails {
-  flex: 1;
-  margin: 0 20px;
-  vertical-align: top;
-}
-
-.mainDetails h3 {
-  margin: 0;
-}
-
-.dateRange,
-.techList {
-  color: #606060;
-  font-size: 14px;
-}
-
 .sliderContainer {
   margin: 20px;
-}
-
-.slideContainer {
-}
-
-.slide {
-  margin: 20px;
-  padding: 20px;
-  height: 240px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-}
-
-.slide h4 {
-  margin: 0;
-}
-
-.slide p,
-.slide li {
-  font-size: 14px;
 }

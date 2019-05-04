@@ -1,0 +1,38 @@
+@import "../../../../../styles/breakpoints.css";
+@value desktop-up from "../../../../../styles/breakpoints.css";
+
+.slide {
+  margin: 20px;
+  padding: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.slide h4 {
+  margin: 0;
+}
+
+.slide p,
+.slide li {
+  font-size: 14px;
+}
+
+.screenshots,
+.content {
+  display: block;
+  margin: 10px;
+}
+
+.screenshots img {
+  width: 100%;
+  height: auto;
+}
+
+@media (desktop-up) {
+  .content,
+  .screenshots {
+    flex: 1;
+  }
+}
