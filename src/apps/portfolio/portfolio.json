@@ -1,11 +1,12 @@
 {
   "name": "Chris Dale",
+  "avatar": "./images/chris-dale.jpg",
   "socialLinks": [
     { "name": "LinkedIn", "icon": "linkedin", "url": "" },
     { "name": "AngelList", "icon": "angellist", "url": "" },
     { "name": "GitHub", "icon": "github", "url": "" }
   ],
-  "profile": "Ambitious and adaptable Web engineer with six years industry experience. Enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking greater responsibility and new, exciting projects to work on.",
+  "profile": "Ambitious Web engineer that enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking greater responsibility and exciting, new challenges.",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
@@ -13,24 +14,20 @@
     { "name": "React", "icon": "react" },
     { "name": "Redux", "icon": "redux" },
     { "name": "Jest", "icon": "jest" },
+    { "name": "CSS Modules", "icon": "cssmodules" },
     { "name": "NodeJS", "icon": "nodejs" },
     { "name": "Express", "icon": "express" },
     { "name": "MongoDB", "icon": "mongodb" },
     { "name": "Webpack", "icon": "webpack" },
-    { "name": "Babel", "icon": "babel" },
-    { "name": "CSS Modules", "icon": "cssmodules" },
-    { "name": "CSS Pre-processors", "icon": "sass" },
-    { "name": "MySQL", "icon": "mysql" },
-    { "name": "PHP", "icon": "php" },
     { "name": "Heroku", "icon": "heroku" },
-    { "name": "Docker", "icon": "docker" },
-    { "name": "PWA", "icon": "pwa" },
     { "name": "Accessibility", "icon": "a11y" },
     { "name": "X-Browser", "icon": "xbrowser" },
     { "name": "Scalability", "icon": "" },
     { "name": "Performance", "icon": "" },
     { "name": "Git/ Github", "icon": "git" },
-    { "name": "Photoshop", "icon": "photoshop" }
+    { "name": "Photoshop", "icon": "photoshop" },
+    { "name": "PHP", "icon": "php" },
+    { "name": "SQL", "icon": "mysql" }
   ],
   "samples": [
     {
@@ -63,18 +60,16 @@
       "company": {
         "name": "ASOS",
         "logo": "asos",
-        "description": "ASOS is an online fashion retailer with over 18 million active customers worldwide. As a solely online shopping experience, ASOS has a strong focus on technical innovation, performance, scalability and quality assurance."
+        "description": ""
       },
       "startDate": "2017-05-01",
       "endDate": "Present",
       "description": "My role at ASOS...",
       "technologies": [
-        "HTML5",
-        "CSS3",
         "Javascript",
         "React",
         "Redux",
-        "SSR",
+        "Server-side rendering",
         "CSS Modules",
         "SVG",
         "Jest",
@@ -82,11 +77,33 @@
         "Webpack",
         "Babel",
         "UML",
-        "TDD"
+        "TDD",
+        "TeamCity",
+        "Git"
+      ],
+      "responsibilities": [
+        "Deliver quality code that follows extreme programming principles and has full test coverage",
+        "Work effectively as part of an interdisciplinary, Agile team",
+        "Review team members work",
+        "Mentor junior members of the team",
+        "Analyse and make decisions on which technologies are best for a task",
+        "Contribute to documentation"
       ],
       "projects": [
         {
-          "title": "Performance",
+          "title": "Website rebuild",
+          "screenshot": "./images/asos.jpg",
+          "description": "",
+          "technologies": [
+            "Javascript",
+            "React",
+            "Redux",
+            "Jest",
+            "CSS Modules"
+          ]
+        },
+        {
+          "title": "Performance Improvements",
           "screenshot": "",
           "description": ""
         },
@@ -96,12 +113,7 @@
           "description": ""
         },
         {
-          "title": "MiniBag",
-          "screenshot": "",
-          "description": ""
-        },
-        {
-          "title": "Hackathon winners",
+          "title": "Hackathon",
           "screenshot": "",
           "description": ""
         }
@@ -112,22 +124,23 @@
       "company": {
         "name": "Creative Services",
         "logo": "creative",
-        "description": "Creative Services is a digital consultancy that provides UX, design and engineering expertise to a client-base of predominantly telecommunications companies, government bodies and military services and thus, has a strong focus on security and reliability, as well as technical innovation and legacy support."
+        "description": "A digital consultancy providing design and engineering expertise to a client-base of predominantly telecommunications companies and government bodies."
       },
       "startDate": "2015-09-01",
       "endDate": "2017-03-01",
-      "description": "As a consultant for Creative Services I worked on a variety of projects. This broadened my technical expertise and gave me the experience of working with a range of clients.",
+      "description": "",
       "projects": [
         {
           "title": "Vodafone: Ready Business",
           "logo": "vodafone",
           "screenshot": "./images/ready-business.jpg",
-          "description": "The Ready Business project was a promotional tool that consisted of a set of survey questions, followed by an interactive results page of tailored feedback, scores and product suggestions. The tool was deployed by approx. 20 of Vodafones' international teams and thus, it had to be well documented and easily customisable. As the core developer during the project, I had the following resonsibilities:",
+          "description": "A promotional tool consisting of survey questions, followed by an interactive results page with tailored feedback, scores and product suggestions. The tool was deployed across 20 of Vodafones' international sites. As the core developer during the project, I had the following resonsibilities:",
           "responsibilities": [
+            "Build pixel-perfect, cross-browser compatible, responsive UI's",
+            "Work closely with designers to solve problems and ensure optimal user experience",
             "Set up and maintain Github repositories and Heroku environments",
-            "Build the tool using the pre-chosen set of technologies to match a set of UI designs",
-            "Provide progress reports and present demonstrations of the tool to the stakeholders at each stage of the development process, including technical walk-throughs to international teams",
-            "QA the tool across different browsers and devices",
+            "Provide regular progress reports and technical demonstrations to stakeholders",
+            "QA the tool across a range of browsers and devices",
             "Write clear and comprehensive documentation"
           ],
           "technologies": [
@@ -144,13 +157,13 @@
           ]
         },
         {
-          "title": "Royal Navy: Web App",
-          "logo": "royal-navy",
+          "title": "Maritime Engineering App",
+          "logo": "maritime",
           "screenshot": "./images/maritime.jpg",
-          "description": "As part of a two-person development team, I helped build a React App for the client. My responsibilities included:",
+          "description": "As part of a small development team, I helped build a React App to manage maritime engineering tasks. My responsibilities included:",
           "responsibilities": [
             "Build UI components and pages to match visual designs",
-            "Build an Express API that mocked the client's ICD",
+            "Build an Express API to mock the client's ICD",
             "Build a lightweight animated splash screen"
           ],
           "technologies": [
@@ -174,9 +187,9 @@
           "screenshot": "./images/three-hub.jpg",
           "description": "I was given the task of finishing a partly-built blog site for Three within a tight deadline. My responsibilities included:",
           "responsibilities": [
-            "Develop remaining features, including the Load More button, TL;DR switch and an animated GIF pauser",
-            "Tidy up the codebase and fix any outstanding defects",
-            "Make the UI match the responsive designs pixel-perfectly"
+            "Communicate effectively with the client to understand the remaining requirements and priorities",
+            "Develop remaining features, including the Load More button, TL;DR switch and an animated GIF pause button",
+            "Fix outstanding visual defects"
           ],
           "technologies": [
             "HTML5",
@@ -193,18 +206,29 @@
     {
       "startDate": "2014-10-01",
       "endDate": "2015-06-01",
-      "description": "Hiatus taken to go travelling"
+      "company": {
+        "name": "Hiatus taken to go travelling",
+        "logo": "globe"
+      }
     },
     {
       "role": "Front-End Developer",
       "company": {
         "name": "First Utility",
         "logo": "first-utility",
-        "description": "First Utility is an independant gas and electricity supplier in the UK."
+        "description": ""
       },
       "startDate": "2013-06-01",
       "endDate": "2014-09-01",
-      "description": "As a front-end developer at First Utility my responsibilities included... overnight deployments using Jenkins",
+      "description": "As a front-end developer at First Utility my responsibilities included",
+      "responsibilities": [
+        "Build pixel-perfect, cross-browser compatible, responsive UI's",
+        "Analyse and make decisions on which technologies are best for a task",
+        "Work effectively as part of an interdisciplinary team",
+        "Review team members work",
+        "Deliver quality, tested code",
+        "Carry out overnight deployments using Jenkins"
+      ],
       "technologies": [
         "HTML5",
         "CSS3",
@@ -221,11 +245,21 @@
       "projects": [
         {
           "title": "Website rebuild",
-          "screenshot": "",
-          "description": "I worked as part of an eight man team to build a fresh, rebranded, responsive version their website and user account system. The website won the 'Utility Website of the Year' award in 2014 and helped quadrouple First Utility's customer base to one million customers."
+          "logo": "woty",
+          "screenshot": "./images/first-utility.jpg",
+          "description": "Working as part of a team, I helped build a rebranded, responsive version the First Utility website and user account system. The website won the 'Utility Website of the Year' award in 2014 and helped quadruple First Utility's customer base to one million customers.",
+          "technologies": [
+            "HTML5",
+            "CSS3",
+            "SASS",
+            "jQuery",
+            "Foundation",
+            "PHP",
+            "Git"
+          ]
         },
         {
-          "title": "Usage graphs",
+          "title": "Engery usage graphs",
           "screenshot": "",
           "description": "Built an interactive graph using Highcharts with data from an API, including caching."
         }
@@ -293,14 +327,16 @@
     "university": [
       {
         "name": "University of Southampton",
+        "startDate": "2008-09-01",
+        "endDate": "2011-06-01",
         "logo": "soton",
-        "degree": "Information Technology in Organisations, BSc",
+        "degree": "Information Technology in Organisations BSc.",
         "result": "First Class with Honours",
-        "description": "",
+        "description": "This is a description about my degree",
         "societies": "Extreme sports society",
         "technologies": [
-          "XHTML",
-          "CSS2",
+          "HTML",
+          "CSS",
           "Javascript",
           "OOP",
           "XML",
@@ -311,18 +347,13 @@
           "Networks",
           "UML",
           "MVC",
-          "Agile"
+          "Software development methodologies"
         ],
         "projects": [
           {
-            "title": "Jeff Taylor Gallery",
+            "title": "Prints 'n' Photos Website",
             "description": "",
             "techologies": ["XHTML", "CSS2", "PHP", "MySQL"]
-          },
-          {
-            "title": "Snake game",
-            "description": "",
-            "technologies": ["C#"]
           }
         ]
       }
@@ -330,6 +361,8 @@
     "school": [
       {
         "name": "Reigate Grammar School",
+        "startDate": "2000-09-01",
+        "endDate": "2008-06-01",
         "logo": "rgs",
         "qualifications": [
           {

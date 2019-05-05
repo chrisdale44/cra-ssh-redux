@@ -8,6 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  background-color: #fff;
 }
 
 body.no-scroll {
@@ -29,13 +31,21 @@ footer {
 h1,
 h2 {
   margin: 0;
+  color: #101010;
+}
+
+h3,
+h4 {
+  color: #101010;
 }
 
 section {
-  color: #101010;
+  color: #202020;
+  background-color: #fff;
   display: block;
-  max-width: 1200px;
-  margin: 0 20px;
+  max-width: 900px;
+  margin: 20px;
+  padding: 20px;
 }
 
 @media (max-width) {
@@ -48,9 +58,9 @@ section {
 section h2 {
   position: relative;
   text-align: center;
-  font-size: 38px;
+  font-size: 26px;
   font-weight: normal;
-  padding: 20px 30px 5px 30px;
+  /* padding: 20px 30px 5px 30px; */
 }
 
 footer {

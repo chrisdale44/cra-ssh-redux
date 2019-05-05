@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { dateRange } from "../helpers";
+import { dateRange } from "../../helpers";
 import classNames from "classnames/bind";
 import componentStyles from "./Header.module.css";
 import icons from "../../../icons/icons.module.css";
@@ -20,14 +20,15 @@ class Header extends Component {
 
     return (
       <div className={styles.heading}>
-        {logo && <span className={cx(styles[logo], styles.icon)} />}
         <div className={styles.mainDetails}>
           {title ? (
             <h4>{title}</h4>
-          ) : (
+          ) : role ? (
             <h3>
               {name}: {role}
             </h3>
+          ) : (
+            <h3>{name}</h3>
           )}
 
           {startDate && endDate && (
@@ -37,13 +38,13 @@ class Header extends Component {
             </span>
           )}
 
-          {technologies && (
+          {/* {technologies && (
             <span className={styles.techList}>
               {technologies.map((t, i) =>
                 i < technologies.length - 1 ? t + ", " : t
               )}
             </span>
-          )}
+          )} */}
         </div>
       </div>
     );

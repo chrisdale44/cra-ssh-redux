@@ -19,7 +19,7 @@
   background-repeat: no-repeat;
   background-position: top left;
   background-size: contain;
-  background-position: center;
+  background-position: top;
   height: 64px;
   width: 64px;
 }
@@ -134,8 +134,6 @@
 .asos {
   composes: logo;
   background-image: url("./asos.svg");
-  height: 40px;
-  width: var(--logo-size);
 }
 .first-utility {
   composes: logo;
@@ -144,8 +142,6 @@
 .mydeco {
   composes: logo;
   background-image: url("./mydeco.svg");
-  height: 40px;
-  width: 120px;
 }
 .openbet {
   composes: logo;
@@ -190,8 +186,8 @@
 .soton {
   composes: logo;
   background-image: url("./soton.svg");
-  height: 50px;
-  width: 120px;
+  height: 40px;
+  width: 100px;
 }
 
 .devon {
@@ -204,4 +200,19 @@
 .verve {
   composes: logo;
   background-image: url("./verve.svg");
+}
+
+.maritime {
+  composes: logo;
+  background-image: url("./maritime.svg");
+}
+
+.woty {
+  composes: logo;
+  background-image: url("./woty.jpg");
+}
+
+.globe {
+  composes: logo;
+  background-image: url("./globe.svg");
 }

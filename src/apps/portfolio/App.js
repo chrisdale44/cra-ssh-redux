@@ -19,6 +19,7 @@ class Portfolio extends Component {
       name,
       socialLinks,
       profile,
+      avatar,
       skills,
       samples,
       experience,
@@ -29,7 +30,7 @@ class Portfolio extends Component {
     return (
       <div>
         <Header name={name} socialLinks={socialLinks} />
-        <Profile profile={profile} />
+        <Profile name={name} profile={profile} avatar={avatar} />
         <Skills skills={skills} />
         <CodeSamples samples={samples} />
         <WorkExperience experience={experience} />

@@ -2,9 +2,13 @@
   margin: 80px auto 10px auto;
   max-width: 660px;
   text-align: justify;
+  display: flex;
+  padding: 0;
 }
 
-.profile p {
-  padding-left: 20px;
-  padding-right: 20px;
+.profile img {
+  height: 180px;
+  width: auto;
+  text-align: top;
+  margin-right: 30px;
 }

@@ -1,4 +1,5 @@
-.educationContainer {
+.jobContainer {
+  max-width: 900px;
   margin: 30px auto 40px auto;
   display: flex;
   margin: 0;
@@ -21,12 +22,32 @@
   position: relative;
 }
 
-.subjectList {
-  list-style: none;
-  padding: 0;
+.jobContainer:last-of-type .contentContainer {
+  border-bottom: none;
+}
+
+h3 {
+  margin: 0;
 }
 
 .dateRange,
 .techList {
   color: #606060;
+}
+
+.expand {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.expandable {
+  max-height: 0px;
+  overflow: hidden;
+}
+
+.expandable.open {
+  max-height: none;
 }
