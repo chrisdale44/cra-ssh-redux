@@ -4,11 +4,12 @@
 .interestsContainer {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .interestTile {
   flex: 1;
-  margin: 10px;
+  margin: 0 10px;
   position: relative;
   max-width: 320px;
 }

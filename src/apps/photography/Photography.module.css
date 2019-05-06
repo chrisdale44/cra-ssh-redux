@@ -1,5 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
 .container {
   flex: 1;
+  margin-right: 60px;
 }
 
 .container h1 {

@@ -15,7 +15,7 @@ section.education {
   margin: 30px auto 40px auto;
   display: flex;
   margin: 0;
-  padding: 20px 0;
+  margin: 20px 0;
 }
 
 .iconContainer {
@@ -27,7 +27,6 @@ section.education {
 .contentContainer {
   flex: 1;
   margin-right: 40px;
-  padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
   transition: height 1s ease-in-out;
   overflow: hidden;
