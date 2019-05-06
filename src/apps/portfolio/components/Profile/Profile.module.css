@@ -1,14 +1,40 @@
+@value tablet-up from "../../../../styles/breakpoints.css";
+@value desktop-up from "../../../../styles/breakpoints.css";
+
 .profile {
   margin: 80px auto 10px auto;
   max-width: 660px;
-  text-align: justify;
+  text-align: left;
   display: flex;
-  padding: 0;
+  padding: 0 20px;
 }
 
 .profile img {
-  height: 180px;
+  height: 130px;
   width: auto;
   text-align: top;
-  margin-right: 30px;
+  margin-right: 10px;
+}
+
+@media (tablet-up) {
+  .profile {
+    text-align: justify;
+    padding: 20px;
+  }
+
+  .profile img {
+    height: 140px;
+    margin-right: 20px;
+  }
+}
+
+@media (desktop-up) {
+  .profile {
+    padding: 0;
+  }
+
+  .profile img {
+    height: 180px;
+    margin-right: 30px;
+  }
 }

@@ -1,0 +1,11 @@
+@value tablet-up from "../../../../styles/breakpoints.css";
+
+.workExperience {
+  padding: 0;
+}
+
+@media (tablet-up) {
+  .workExperience {
+    padding: 0 20px;
+  }
+}

@@ -1,0 +1,30 @@
+@value tablet-up from "../../../../styles/breakpoints.css";
+@value desktop-up from "../../../../styles/breakpoints.css";
+
+.interestsContainer {
+  display: flex;
+  justify-content: center;
+}
+
+.interestTile {
+  flex: 1;
+  margin: 10px;
+  position: relative;
+  max-width: 320px;
+}
+
+.interestTile img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.interestTile h3 {
+  color: white;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px;
+}

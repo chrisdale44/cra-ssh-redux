@@ -10,7 +10,7 @@
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
-    { "name": "Javascript ES6", "icon": "javascript" },
+    { "name": "Javascript", "icon": "javascript" },
     { "name": "React", "icon": "react" },
     { "name": "Redux", "icon": "redux" },
     { "name": "Jest", "icon": "jest" },
@@ -20,11 +20,11 @@
     { "name": "MongoDB", "icon": "mongodb" },
     { "name": "Webpack", "icon": "webpack" },
     { "name": "Heroku", "icon": "heroku" },
-    { "name": "Accessibility", "icon": "a11y" },
-    { "name": "X-Browser", "icon": "xbrowser" },
-    { "name": "Scalability", "icon": "" },
-    { "name": "Performance", "icon": "" },
     { "name": "Git/ Github", "icon": "git" },
+    { "name": "X-Browser", "icon": "xbrowser" },
+    { "name": "Accessibility", "icon": "a11y" },
+    { "name": "Scalability", "icon": "scalability" },
+    { "name": "Performance", "icon": "performance" },
     { "name": "Photoshop", "icon": "photoshop" },
     { "name": "PHP", "icon": "php" },
     { "name": "SQL", "icon": "mysql" }
@@ -398,11 +398,12 @@
   "interests": [
     {
       "title": "Skateboarding",
-      "description": ""
+      "image": "./images/skateboarding.jpg"
     },
     {
       "title": "Photography",
-      "description": ""
+      "image": "./images/photography.jpg",
+      "link": "/photography"
     }
   ]
 }

@@ -1,13 +1,26 @@
+@value tablet-up from "../../../../styles/breakpoints.css";
+@value desktop-up from "../../../../styles/breakpoints.css";
+
+section.education {
+  padding: 0;
+}
+
+@media (tablet-up) {
+  section.education {
+    padding: 0 20px;
+  }
+}
+
 .educationContainer {
   margin: 30px auto 40px auto;
   display: flex;
   margin: 0;
-  padding: 30px 0;
+  padding: 20px 0;
 }
 
 .iconContainer {
   flex: 0;
-  flex-basis: 140px;
+  flex-basis: 64px;
   text-align: center;
 }
 
@@ -19,6 +32,26 @@
   transition: height 1s ease-in-out;
   overflow: hidden;
   position: relative;
+}
+
+@media (tablet-up) {
+  .iconContainer {
+    flex-basis: 100px;
+  }
+
+  .contentContainer {
+    margin-right: 40px;
+  }
+}
+
+@media (desktop-up) {
+  .iconContainer {
+    flex-basis: 140px;
+  }
+}
+
+.educationContainer:last-of-type .contentContainer {
+  border-bottom: none;
 }
 
 .subjectList {

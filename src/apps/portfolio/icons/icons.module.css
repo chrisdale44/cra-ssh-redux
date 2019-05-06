@@ -1,6 +1,13 @@
+@value tablet-up from "../../../styles/breakpoints.css";
+@value desktop-up from "../../../styles/breakpoints.css";
+
 :root {
-  --icon-size: 36px;
-  --logo-size: 112px;
+  --icon-size-small: 30px;
+  --logo-size-small: 90px;
+  --icon-size-medium: 32px;
+  --logo-size-medium: 100px;
+  --icon-size-large: 36px;
+  --logo-size-large: 112px;
 }
 
 .icon {
@@ -8,8 +15,8 @@
   text-indent: -100%;
   background-repeat: no-repeat;
   background-position: top left;
-  height: var(--icon-size);
-  width: var(--icon-size);
+  height: var(--icon-size-small);
+  width: var(--icon-size-small);
   background-size: contain;
 }
 
@@ -20,8 +27,31 @@
   background-position: top left;
   background-size: contain;
   background-position: top;
-  height: 64px;
-  width: 64px;
+  height: 40px;
+  width: 40px;
+}
+
+@media (tablet-up) {
+  .icon {
+    height: var(--icon-size-medium);
+    width: var(--icon-size-medium);
+  }
+  .logo {
+    height: 56px;
+    width: 56px;
+  }
+}
+
+@media (desktop-up) {
+  .icon {
+    height: var(--icon-size-large);
+    width: var(--icon-size-large);
+  }
+
+  .logo {
+    height: 64px;
+    width: 64px;
+  }
 }
 
 .github {
@@ -125,12 +155,52 @@
   composes: icon;
   background-image: url("./docker.svg");
 }
+.scalability {
+  composes: icon;
+  background-image: url("./scalability.svg");
+  height: calc(var(--icon-size-small) - 2px);
+  height: calc(var(--icon-size-small) - 2px);
+}
+
+@media (tablet-up) {
+  .scalability {
+    height: calc(var(--icon-size-medium) - 3px);
+    width: calc(var(--icon-size-medium) - 3px);
+  }
+}
+
+@media (desktop-up) {
+  .scalability {
+    height: calc(var(--icon-size-large) - 4px);
+    width: calc(var(--icon-size-large) - 4px);
+  }
+}
+
+.performance {
+  composes: icon;
+  background-image: url("./performance.svg");
+}
 .cssmodules {
   composes: icon;
   background-image: url("./cssmodules.png");
-  height: 40px;
-  width: 40px;
+  height: calc(var(--icon-size-small) + 2px);
+  width: calc(var(--icon-size-small) + 2px);
 }
+
+@media (tablet-up) {
+  .cssmodules {
+    height: calc(var(--icon-size-medium) + 3px);
+    width: calc(var(--icon-size-medium) + 3px);
+  }
+}
+
+@media (desktop-up) {
+  .cssmodules {
+    height: calc(var(--icon-size-large) + 4px);
+    width: calc(var(--icon-size-large) + 4px);
+  }
+}
+
 .asos {
   composes: logo;
   background-image: url("./asos.svg");
@@ -186,8 +256,6 @@
 .soton {
   composes: logo;
   background-image: url("./soton.svg");
-  height: 40px;
-  width: 100px;
 }
 
 .devon {

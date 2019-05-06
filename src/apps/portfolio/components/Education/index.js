@@ -11,7 +11,7 @@ class Education extends Component {
   render() {
     const { university, school } = this.props.education;
     return (
-      <section>
+      <section className={styles.education}>
         <h2>Education</h2>
 
         {university.map(

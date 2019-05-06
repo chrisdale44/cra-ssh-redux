@@ -1,4 +1,6 @@
 @value max-width from "../../styles/breakpoints.css";
+@value tablet-up from "../../styles/breakpoints.css";
+@value desktop-up from "../../styles/breakpoints.css";
 
 body {
   margin: 0;
@@ -8,8 +10,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 14px;
+  font-size: 12px;
   background-color: #fff;
+}
+
+@media (tablet-up) {
+  body {
+    font-size: 13px;
+  }
+}
+
+@media (desktop-up) {
+  body {
+    font-size: 14px;
+  }
 }
 
 body.no-scroll {
@@ -41,17 +55,16 @@ h4 {
 
 section {
   color: #202020;
-  background-color: #fff;
   display: block;
   max-width: 900px;
-  margin: 20px;
-  padding: 20px;
+  padding: 10px;
+  margin-left: auto !important;
+  margin-right: auto !important;
 }
 
-@media (max-width) {
+@media (dektop-up) {
   section {
-    margin-left: auto !important;
-    margin-right: auto !important;
+    padding: 20px;
   }
 }
 
