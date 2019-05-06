@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[0],{468:function(e,t,n){"use strict";n.r(t);var a=n(109),r=n(110),c=n(112),o=n(111),u=n(113),i=n(1),p=n.n(i),h=function(e){function t(){return Object(a.a)(this,t),Object(c.a)(this,Object(o.a)(t).apply(this,arguments))}return Object(u.a)(t,e),Object(r.a)(t,[{key:"render",value:function(){return p.a.createElement("div",null,"HOME ",p.a.createElement("a",{href:"/photography"},"Photog"))}}]),t}(i.Component);t.default=h}}]);
-//# sourceMappingURL=home.723695da.chunk.js.map
