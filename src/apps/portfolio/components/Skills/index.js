@@ -8,7 +8,7 @@ class Skills extends Component {
     const { skills } = this.props;
     return (
       <section className={styles.skills}>
-        <h2>Skills</h2>
+        <h2>Core Skills</h2>
         <ul>
           {skills.map(({ name, icon }, i) => (
             <li key={i}>

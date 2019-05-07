@@ -53,40 +53,44 @@ h3 {
   color: #606060;
 }
 
-.circleButton {
-  cursor: pointer;
-  background-color: #101010;
-  border-radius: 50%;
-  font-weight: bold;
-  text-align: center;
-  font-size: 18px;
-  line-height: 18px;
-  color: white;
-  font-weight: bold;
-  height: 18px;
-  width: 18px;
-  border: none;
-  padding: 0;
-  vertical-align: top;
-}
-
-.circleButton.expand {
+.expandIcon {
   position: absolute;
   right: 10px;
-  top: 16px;
+  top: 0px;
+  background-color: transparent;
+  cursor: pointer;
 }
 
-.circleButton.nextArrow {
+.nextArrow,
+.prevArrow {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  border: none;
+  outline: 0;
+  background-color: transparent;
+}
+.nextArrow {
+  right: -20px;
+}
+.prevArrow {
+  left: -20px;
+}
+
+/* .circleButton.nextArrow {
   position: absolute;
   right: -20px;
   top: calc(50% - 9px);
+  background-image: url("./plus.svg");
 }
 
 .circleButton.prevArrow {
   position: absolute;
   left: -20px;
   top: calc(50% - 9px);
-}
+  background-image: url("./plus.svg");
+} */
 
 .expandable {
   max-height: 0px;
@@ -98,11 +102,12 @@ h3 {
 }
 
 .sliderContainer {
-  margin: 0 30px;
+  margin: 0 20px;
   padding-bottom: 40px;
 }
 
 .head {
-  padding-bottom: 20px;
+  padding-bottom: 10px;
+  padding-right: 40px;
   cursor: pointer;
 }

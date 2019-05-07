@@ -9,6 +9,12 @@ const styles = { ...componentStyles, ...icons };
 
 let cx = classNames.bind(styles);
 
+const PrevArrow = ({ onClick }) => (
+  <button className={cx(styles.prev, styles.prevArrow)} onClick={onClick} />
+);
+const NextArrow = ({ onClick }) => (
+  <button className={cx(styles.next, styles.nextArrow)} onClick={onClick} />
+);
 const settings = {
   dots: true,
   slidesToShow: 2,
@@ -25,7 +31,9 @@ const settings = {
         dots: true
       }
     }
-  ]
+  ],
+  prevArrow: <PrevArrow />,
+  nextArrow: <NextArrow />
 };
 
 class JobTile extends Component {
@@ -58,11 +66,6 @@ class JobTile extends Component {
 
     settings.infinite = projects && projects.length > 2;
 
-    const expandableStyles = cx({
-      [styles.expandable]: true,
-      [styles.open]: open
-    });
-
     return (
       <article className={styles.jobContainer}>
         <div className={styles.iconContainer}>
@@ -91,14 +94,20 @@ class JobTile extends Component {
 
           {(description || responsibilities || projects) && (
             <button
-              className={cx(styles.circleButton, styles.expand)}
+              className={cx(
+                open ? [styles.minus] : [styles.plus],
+                styles.expandIcon
+              )}
               onClick={this.handleExpand}
-            >
-              {open ? String.fromCharCode(8722) : String.fromCharCode(43)}
-            </button>
+            />
           )}
 
-          <div className={expandableStyles}>
+          <div
+            className={cx({
+              [styles.expandable]: true,
+              [styles.open]: open
+            })}
+          >
             {description && (
               <p className={styles.description}>
                 {company.description && <>{company.description}&nbsp;</>}

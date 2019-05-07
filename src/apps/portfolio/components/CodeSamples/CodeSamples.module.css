@@ -1,12 +1,10 @@
 .sliderContainer {
-  margin: 0px;
-  margin-bottom: 30px;
+  margin: 10px 40px 30px 40px;
 }
 
 .sampleTile {
-  margin: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
   height: 100px;
-  padding: 20px;
-  padding-top: 1px;
+  padding: 10px;
+  margin: 10px;
+  background-color: blue;
 }

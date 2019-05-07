@@ -2,6 +2,11 @@
 @value tablet-up from "../../styles/breakpoints.css";
 @value desktop-up from "../../styles/breakpoints.css";
 
+:global(html.modal-open),
+:global(html.modal-open body) {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 0;

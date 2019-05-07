@@ -11,7 +11,7 @@ class CodeSamples extends Component {
       initialSlide: 0,
       responsive: [
         {
-          breakpoint: 1200,
+          breakpoint: 480,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,

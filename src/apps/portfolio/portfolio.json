@@ -18,7 +18,7 @@
       "url": "https://github.com/chrisdale44"
     }
   ],
-  "profile": "Ambitious Web engineer that enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking a role with greater responsibility and exciting technical challenges within an organisation that works towards a good cause.",
+  "profile": "Ambitious Web engineer that enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking a new role with greater responsibility and exciting technical challenges within an organisation that works towards a good cause.",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
@@ -35,7 +35,7 @@
     { "name": "Git/ Github", "icon": "git" },
     { "name": "X-Browser", "icon": "xbrowser" },
     { "name": "Accessibility", "icon": "a11y" },
-    { "name": "Scalability", "icon": "scalability" },
+    { "name": "Responsive", "icon": "responsive" },
     { "name": "Performance", "icon": "performance" },
     { "name": "Photoshop", "icon": "photoshop" },
     { "name": "PHP", "icon": "php" },
@@ -103,7 +103,7 @@
       ],
       "projects": [
         {
-          "title": "Website rebuild",
+          "title": "Website Rebuild",
           "image": "./images/asos.jpg",
           "description": "",
           "technologies": [
@@ -120,13 +120,8 @@
           "description": ""
         },
         {
-          "title": "Accessibility",
-          "image": "",
-          "description": ""
-        },
-        {
-          "title": "Hackathon",
-          "image": "",
+          "title": "Hackathon Winners",
+          "image": "./images/asosphere.jpg",
           "description": ""
         }
       ]
@@ -140,7 +135,7 @@
       },
       "startDate": "2015-09-01",
       "endDate": "2017-03-01",
-      "description": "",
+      "description": "Job description here",
       "projects": [
         {
           "title": "Vodafone Ready Business Indicator",
@@ -169,7 +164,7 @@
           ]
         },
         {
-          "title": "Maritime Engineering App",
+          "title": "Maritime Engineering Web App",
           "logo": "maritime",
           "image": "./images/maritime.jpg",
           "description": "As part of a small development team, I helped build a React App to manage maritime engineering tasks. My responsibilities included:",
@@ -256,7 +251,7 @@
       ],
       "projects": [
         {
-          "title": "Website rebuild",
+          "title": "Website Rebuild",
           "logo": "woty",
           "image": "./images/first-utility.jpg",
           "description": "Working as part of a team, I helped build a rebranded, responsive version the First Utility website and user account system. The website won the 'Utility Website of the Year' award in 2014 and helped quadruple First Utility's customer base to one million customers.",
@@ -271,7 +266,7 @@
           ]
         },
         {
-          "title": "Engery usage graphs",
+          "title": "Engery Usage Graphs",
           "image": "",
           "description": "Built an interactive graph using Highcharts with data from an API, including caching."
         }
@@ -298,7 +293,7 @@
       ]
     },
     {
-      "role": "Junior Full-Stack Developer",
+      "role": "Junior Developer",
       "company": {
         "name": "OpenBet",
         "logo": "openbet",
@@ -310,7 +305,7 @@
       "technologies": ["HTML5", "CSS3", "Javascript", "TCL", "SQL"]
     },
     {
-      "role": "Intern Back-End Developer",
+      "role": "Intern Developer",
       "company": {
         "name": "Verve Media",
         "logo": "verve",

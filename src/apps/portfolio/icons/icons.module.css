@@ -18,6 +18,8 @@
   height: var(--icon-size-small);
   width: var(--icon-size-small);
   background-size: contain;
+  border: none;
+  overflow: hidden;
 }
 
 .logo {
@@ -52,6 +54,41 @@
     height: 64px;
     width: 64px;
   }
+}
+
+.plus {
+  composes: icon;
+  background-image: url("./plus.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.minus {
+  composes: icon;
+  background-image: url("./minus.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.cross {
+  composes: icon;
+  background-image: url("./cross.svg");
+  height: 28px;
+  width: 28px;
+}
+
+.prev {
+  composes: icon;
+  background-image: url("./prev.svg");
+  height: 24px;
+  width: 24px;
+}
+
+.next {
+  composes: icon;
+  background-image: url("./next.svg");
+  height: 24px;
+  width: 24px;
 }
 
 .github {
@@ -174,6 +211,11 @@
     height: calc(var(--icon-size-large) - 4px);
     width: calc(var(--icon-size-large) - 4px);
   }
+}
+
+.responsive {
+  composes: icon;
+  background-image: url("./responsive.svg");
 }
 
 .performance {

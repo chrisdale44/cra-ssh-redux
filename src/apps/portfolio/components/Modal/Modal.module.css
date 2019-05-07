@@ -5,35 +5,29 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.8);
-  padding: 50px;
+  padding: 20px;
   z-index: 1000;
+  overflow: hidden;
 }
 
 .modal {
   background-color: #fff;
-  max-width: 500px;
+  max-width: 900px;
   min-height: 300px;
+  max-height: 90vh;
+  overflow-y: scroll;
   margin: 0 auto;
-  padding: 30px;
+  padding: 20px;
   position: relative;
 }
 
 .close {
   cursor: pointer;
-  background-color: #101010;
-  border-radius: 50%;
-  font-weight: bold;
-  text-align: center;
-  font-size: 16px;
-  line-height: 20px;
-  color: white;
-  font-weight: bold;
-  height: 20px;
-  width: 20px;
   border: none;
+  outline: 0;
   padding: 0;
-  vertical-align: top;
   position: absolute;
-  top: 4px;
-  right: 4px;
+  top: 6px;
+  right: 6px;
+  background-color: transparent;
 }
