@@ -37,6 +37,7 @@ class Portfolio extends Component {
         <Education education={education} />
         <Interests interests={interests} />
         <footer>{String.fromCharCode(169)} Christopher Dale 2019</footer>
+        <div id="modal-root" />
       </div>
     );
   }

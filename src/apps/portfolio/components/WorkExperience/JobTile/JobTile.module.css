@@ -19,7 +19,6 @@
 .contentContainer {
   flex: 1;
   margin-right: 20px;
-  padding-bottom: 20px;
   border-bottom: 1px solid #ccc;
   transition: height 1s ease-in-out;
   overflow: hidden;
@@ -58,9 +57,17 @@ h3 {
 .expand {
   position: absolute;
   right: 10px;
-  top: 10px;
-  padding: 10px;
+  top: 16px;
   cursor: pointer;
+  background-color: #101010;
+  border-radius: 50%;
+  font-weight: bold;
+  text-align: center;
+  font-size: 14px;
+  line-height: 16px;
+  color: white;
+  height: 18px;
+  width: 18px;
 }
 
 .expandable {
@@ -70,4 +77,14 @@ h3 {
 
 .expandable.open {
   max-height: none;
+}
+
+.sliderContainer {
+  margin: 0 -10px;
+  padding-bottom: 40px;
+}
+
+.head {
+  padding-bottom: 20px;
+  cursor: pointer;
 }

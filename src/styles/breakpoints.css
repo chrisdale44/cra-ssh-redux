@@ -1,4 +1,4 @@
 @value mobile-up: min-width: 480px;
 @value tablet-up: min-width: 768px;
-@value desktop-up: min-width: 975px;
+@value desktop-up: min-width: 1080px;
 @value max-width: min-width: 1200px;

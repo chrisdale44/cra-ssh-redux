@@ -2,9 +2,21 @@
   "name": "Chris Dale",
   "avatar": "./images/chris-dale.jpg",
   "socialLinks": [
-    { "name": "LinkedIn", "icon": "linkedin", "url": "" },
-    { "name": "AngelList", "icon": "angellist", "url": "" },
-    { "name": "GitHub", "icon": "github", "url": "" }
+    {
+      "name": "LinkedIn",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/christopher-dale-bb125b39/"
+    },
+    {
+      "name": "AngelList",
+      "icon": "angellist",
+      "url": "https://angel.co/christopher-dale"
+    },
+    {
+      "name": "GitHub",
+      "icon": "github",
+      "url": "https://github.com/chrisdale44"
+    }
   ],
   "profile": "Ambitious Web engineer that enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking greater responsibility and exciting, new challenges.",
   "skills": [
@@ -31,9 +43,9 @@
   ],
   "samples": [
     {
-      "title": "Photography Portfolio",
+      "title": "Photography App",
       "description": "",
-      "link": "",
+      "url": "",
       "technologies": [
         "HTML5",
         "CSS3",
@@ -48,9 +60,9 @@
       ]
     },
     {
-      "title": "Poker",
+      "title": "Poker Algorithm",
       "description": "",
-      "link": "",
+      "url": "",
       "technologies": []
     }
   ],
@@ -92,7 +104,7 @@
       "projects": [
         {
           "title": "Website rebuild",
-          "screenshot": "./images/asos.jpg",
+          "image": "./images/asos.jpg",
           "description": "",
           "technologies": [
             "Javascript",
@@ -104,17 +116,17 @@
         },
         {
           "title": "Performance Improvements",
-          "screenshot": "",
+          "image": "./images/performance.jpg",
           "description": ""
         },
         {
           "title": "Accessibility",
-          "screenshot": "",
+          "image": "",
           "description": ""
         },
         {
           "title": "Hackathon",
-          "screenshot": "",
+          "image": "",
           "description": ""
         }
       ]
@@ -131,9 +143,9 @@
       "description": "",
       "projects": [
         {
-          "title": "Vodafone: Ready Business",
+          "title": "Vodafone Ready Business Indicator",
           "logo": "vodafone",
-          "screenshot": "./images/ready-business.jpg",
+          "image": "./images/rbi.jpg",
           "description": "A promotional tool consisting of survey questions, followed by an interactive results page with tailored feedback, scores and product suggestions. The tool was deployed across 20 of Vodafones' international sites. As the core developer during the project, I had the following resonsibilities:",
           "responsibilities": [
             "Build pixel-perfect, cross-browser compatible, responsive UI's",
@@ -159,7 +171,7 @@
         {
           "title": "Maritime Engineering App",
           "logo": "maritime",
-          "screenshot": "./images/maritime.jpg",
+          "image": "./images/maritime.jpg",
           "description": "As part of a small development team, I helped build a React App to manage maritime engineering tasks. My responsibilities included:",
           "responsibilities": [
             "Build UI components and pages to match visual designs",
@@ -184,7 +196,7 @@
         {
           "title": "Three Blog Website",
           "logo": "three",
-          "screenshot": "./images/three-hub.jpg",
+          "image": "./images/three-hub.jpg",
           "description": "I was given the task of finishing a partly-built blog site for Three within a tight deadline. My responsibilities included:",
           "responsibilities": [
             "Communicate effectively with the client to understand the remaining requirements and priorities",
@@ -246,7 +258,7 @@
         {
           "title": "Website rebuild",
           "logo": "woty",
-          "screenshot": "./images/first-utility.jpg",
+          "image": "./images/first-utility.jpg",
           "description": "Working as part of a team, I helped build a rebranded, responsive version the First Utility website and user account system. The website won the 'Utility Website of the Year' award in 2014 and helped quadruple First Utility's customer base to one million customers.",
           "technologies": [
             "HTML5",
@@ -260,7 +272,7 @@
         },
         {
           "title": "Engery usage graphs",
-          "screenshot": "",
+          "image": "",
           "description": "Built an interactive graph using Highcharts with data from an API, including caching."
         }
       ]
@@ -311,7 +323,7 @@
           "title": "Do A Book Website",
 
           "logo": "devon",
-          "screenshot": "./images/doabook.jpg",
+          "image": "./images/doabook.jpg",
           "description": "During my internship at Verve Media I worked on a project for Devon County Council that aimed to encourage creative writing amongst children. The Do A Book website allowed children to download a set of illustrations by a local artist, write their own story to the pictures, and then upload their book for others to read and vote on. My responsibilities included ",
           "responsibilities": [
             "Write the server-side code for the website",
@@ -403,7 +415,7 @@
     {
       "title": "Photography",
       "image": "./images/photography.jpg",
-      "link": "/photography"
+      "url": "/photography"
     }
   ]
 }

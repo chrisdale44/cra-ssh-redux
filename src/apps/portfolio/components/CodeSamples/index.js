@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Slider from "react-slick";
-import styles from "./Projects.module.css";
+import styles from "./CodeSamples.module.css";
 
 class CodeSamples extends Component {
   render() {
@@ -26,10 +26,10 @@ class CodeSamples extends Component {
         <div className={styles.sliderContainer}>
           <Slider {...settings}>
             {samples.map(({ title, technologies }, i) => (
-              <div>
-                <div key={i} className={styles.sampleTile}>
+              <div key={i}>
+                <div className={styles.sampleTile}>
                   <h3>{title}</h3>
-                  <span>{technologies && technologies.map(t => t + ", ")}</span>
+                  {/* <span>{technologies && technologies.map(t => t + ", ")}</span> */}
                 </div>
               </div>
             ))}

@@ -1,7 +1,7 @@
 @import "../../../../../styles/breakpoints.css";
 @value desktop-up from "../../../../../styles/breakpoints.css";
 
-.slide {
+/* .slide {
   margin: 20px;
   padding: 10px;
   overflow: hidden;
@@ -19,7 +19,7 @@
   font-size: 14px;
 }
 
-.screenshots,
+.images,
 .content {
   display: block;
   margin: 10px;
@@ -27,7 +27,7 @@
   height: calc(100% - 20px);
 }
 
-.screenshots img {
+.images img {
   max-width: 100%;
   max-height: 100%;
   margin: 0 auto;
@@ -39,7 +39,28 @@
   }
 
   .content,
-  .screenshots {
+  .images {
     flex: 1;
   }
+} */
+
+.imageTile {
+  margin: 10px;
+  position: relative;
+}
+
+.imageTile img {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.imageTile h3 {
+  color: white;
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 12px;
 }

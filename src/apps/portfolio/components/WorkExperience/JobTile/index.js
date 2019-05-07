@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import classNames from "classnames/bind";
-
+import Slider from "react-slick";
 import componentStyles from "./JobTile.module.css";
 import icons from "../../../icons/icons.module.css";
 import ProjectTile from "../ProjectTile";
@@ -11,17 +11,32 @@ let cx = classNames.bind(styles);
 
 const settings = {
   dots: true,
-  slidesToShow: 1,
+  slidesToShow: 2,
   slidesToScroll: 1,
-  initialSlide: 0
+  initialSlide: 0,
+  infinite: false,
+  responsive: [
+    {
+      breakpoint: 480,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        dots: true
+      }
+    }
+  ]
 };
 
 class JobTile extends Component {
-  state = {
-    open: false
-  };
+  constructor(props) {
+    super();
+    this.state = {
+      open: props.open
+    };
+  }
 
-  handleClick = () => {
+  handleExpand = () => {
     this.setState({
       open: !this.state.open
     });
@@ -39,8 +54,6 @@ class JobTile extends Component {
     } = this.props;
     const { open } = this.state;
 
-    settings.infinite = projects && projects.length > 2;
-
     const expandableStyles = cx({
       [styles.expandable]: true,
       [styles.open]: open
@@ -55,24 +68,26 @@ class JobTile extends Component {
         </div>
 
         <div className={styles.contentContainer}>
-          {role ? (
-            <h3>
-              {company.name}: {role}
-            </h3>
-          ) : (
-            <h3>{company.name}</h3>
-          )}
+          <div className={styles.head} onClick={this.handleExpand}>
+            {role ? (
+              <h3>
+                {company.name}: {role}
+              </h3>
+            ) : (
+              <h3>{company.name}</h3>
+            )}
 
-          {startDate && endDate && (
-            <span className={styles.dateRange}>
-              {dateRange(startDate, endDate)}
-              <br />
-            </span>
-          )}
+            {startDate && endDate && (
+              <span className={styles.dateRange}>
+                {dateRange(startDate, endDate)}
+                <br />
+              </span>
+            )}
+          </div>
 
-          {(description || responsibilities) && (
-            <span className={styles.expand} onClick={this.handleClick}>
-              {open ? "-" : "+"}
+          {(description || responsibilities || projects) && (
+            <span className={styles.expand} onClick={this.handleExpand}>
+              {open ? String.fromCharCode(8722) : String.fromCharCode(43)}
             </span>
           )}
 
@@ -86,23 +101,23 @@ class JobTile extends Component {
 
             {responsibilities && (
               <ul>
-                {responsibilities.map(responsibility => (
-                  <li>{responsibility}</li>
+                {responsibilities.map((responsibility, i) => (
+                  <li key={i}>{responsibility}</li>
                 ))}
               </ul>
             )}
+
+            {projects && <h3>Projects</h3>}
+            <div className={styles.sliderContainer}>
+              <Slider {...settings}>
+                {projects &&
+                  projects.map(({ ...props }, i) => (
+                    <ProjectTile {...props} key={i} />
+                  ))}
+              </Slider>
+            </div>
           </div>
         </div>
-
-        {/* {projects && <h3>Projects</h3>}
-            <div class={styles.sliderContainer}>
-                <Slider {...settings}>
-                {projects &&
-                    projects.map(({ ...props }) => (
-                    <ProjectTile {...props} />
-                    ))}
-                </Slider>
-            </div> */}
       </article>
     );
   }

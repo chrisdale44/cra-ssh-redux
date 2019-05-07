@@ -59,8 +59,8 @@ class Education extends Component {
                   <div className={styles.qualification} key={i}>
                     <h4>{name}</h4>
                     <ul className={styles.subjectList}>
-                      {subjects.map(({ title, result }) => (
-                        <li>
+                      {subjects.map(({ title, result }, j) => (
+                        <li key={j}>
                           {result} - {title}
                         </li>
                       ))}

@@ -11,7 +11,14 @@ class Header extends Component {
         <h1>{name}</h1>
         <div className={styles.socialLinks}>
           {socialLinks.map(({ name, icon, url }, i) => (
-            <a href={url} key={i} className={styles[icon]} aria-label={name} />
+            <a
+              href={url}
+              key={i}
+              className={styles[icon]}
+              aria-label={name}
+              target="_blank"
+              rel="noopener noreferrer"
+            />
           ))}
         </div>
       </header>

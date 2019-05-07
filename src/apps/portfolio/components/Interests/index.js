@@ -8,8 +8,8 @@ class Interests extends Component {
       <section>
         <h2>Interests</h2>
         <div className={styles.interestsContainer}>
-          {interests.map(({ title, image, link }, i) => (
-            <a className={styles.interestTile} href={link}>
+          {interests.map(({ title, image, url }, i) => (
+            <a className={styles.interestTile} href={url} key={i}>
               <img src={image} alt={title} />
               <h3 key={i}>{title}</h3>
             </a>
