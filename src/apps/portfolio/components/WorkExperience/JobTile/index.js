@@ -14,7 +14,7 @@ const settings = {
   slidesToShow: 2,
   slidesToScroll: 1,
   initialSlide: 0,
-  infinite: false,
+  infinite: true,
   responsive: [
     {
       breakpoint: 480,
@@ -32,7 +32,9 @@ class JobTile extends Component {
   constructor(props) {
     super();
     this.state = {
-      open: props.open
+      open: props.open,
+      clientXonMouseDown: null,
+      clientYonMouseDown: null
     };
   }
 
@@ -53,6 +55,8 @@ class JobTile extends Component {
       endDate
     } = this.props;
     const { open } = this.state;
+
+    settings.infinite = projects && projects.length > 2;
 
     const expandableStyles = cx({
       [styles.expandable]: true,
@@ -86,9 +90,12 @@ class JobTile extends Component {
           </div>
 
           {(description || responsibilities || projects) && (
-            <span className={styles.expand} onClick={this.handleExpand}>
+            <button
+              className={cx(styles.circleButton, styles.expand)}
+              onClick={this.handleExpand}
+            >
               {open ? String.fromCharCode(8722) : String.fromCharCode(43)}
-            </span>
+            </button>
           )}
 
           <div className={expandableStyles}>

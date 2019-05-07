@@ -18,7 +18,7 @@
       "url": "https://github.com/chrisdale44"
     }
   ],
-  "profile": "Ambitious Web engineer that enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking greater responsibility and exciting, new challenges.",
+  "profile": "Ambitious Web engineer that enjoys problem solving, writing clean code and has a strong interest in emerging Web technologies. Currently seeking a role with greater responsibility and exciting technical challenges within an organisation that works towards a good cause.",
   "skills": [
     { "name": "HTML5", "icon": "html5" },
     { "name": "CSS3", "icon": "css3" },
@@ -94,7 +94,7 @@
         "Git"
       ],
       "responsibilities": [
-        "Deliver quality code that follows extreme programming principles and has full test coverage",
+        "Deliver quality code that follows software design principles (DRY, KISS, YAGNI) and has full test coverage",
         "Work effectively as part of an interdisciplinary, Agile team",
         "Review team members work",
         "Mentor junior members of the team",

@@ -3,7 +3,6 @@
 @value desktop-up from "../../../../../styles/breakpoints.css";
 
 .jobContainer {
-  max-width: 900px;
   margin: 30px auto 40px auto;
   display: flex;
   margin: 0;
@@ -54,20 +53,39 @@ h3 {
   color: #606060;
 }
 
-.expand {
-  position: absolute;
-  right: 10px;
-  top: 16px;
+.circleButton {
   cursor: pointer;
   background-color: #101010;
   border-radius: 50%;
   font-weight: bold;
   text-align: center;
-  font-size: 14px;
-  line-height: 16px;
+  font-size: 18px;
+  line-height: 18px;
   color: white;
+  font-weight: bold;
   height: 18px;
   width: 18px;
+  border: none;
+  padding: 0;
+  vertical-align: top;
+}
+
+.circleButton.expand {
+  position: absolute;
+  right: 10px;
+  top: 16px;
+}
+
+.circleButton.nextArrow {
+  position: absolute;
+  right: -20px;
+  top: calc(50% - 9px);
+}
+
+.circleButton.prevArrow {
+  position: absolute;
+  left: -20px;
+  top: calc(50% - 9px);
 }
 
 .expandable {
@@ -80,7 +98,7 @@ h3 {
 }
 
 .sliderContainer {
-  margin: 0 -10px;
+  margin: 0 30px;
   padding-bottom: 40px;
 }
 

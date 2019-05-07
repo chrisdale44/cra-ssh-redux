@@ -47,6 +47,7 @@
 .imageTile {
   margin: 10px;
   position: relative;
+  cursor: pointer;
 }
 
 .imageTile img {

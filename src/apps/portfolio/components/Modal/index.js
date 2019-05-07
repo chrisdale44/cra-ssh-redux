@@ -26,7 +26,9 @@ class Modal extends Component {
       <div className={styles.backdrop} onClick={onClose}>
         <div className={styles.modal}>
           {children}
-          <button onClick={onClose}>Close</button>
+          <button onClick={onClose} className={styles.close}>
+            X
+          </button>
         </div>
       </div>,
       this.el

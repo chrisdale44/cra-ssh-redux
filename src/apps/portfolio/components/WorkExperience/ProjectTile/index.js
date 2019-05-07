@@ -14,6 +14,26 @@ class ProjectTile extends Component {
     });
   };
 
+  handleOnMouseDown(e) {
+    this.setState({
+      clientXonMouseDown: e.clientX,
+      clientYonMouseDown: e.clientY
+    });
+    e.preventDefault();
+  }
+
+  handleOnClick(e) {
+    e.stopPropagation();
+    if (
+      this.state.clientXonMouseDown !== e.clientX ||
+      this.state.clientYonMouseDown !== e.clientY
+    ) {
+      e.preventDefault();
+      return;
+    }
+    this.toggleModal();
+  }
+
   render() {
     const {
       title,
@@ -31,7 +51,11 @@ class ProjectTile extends Component {
     return (
       <>
         <div className={styles.slideContainer}>
-          <div className={styles.imageTile} onClick={this.toggleModal}>
+          <div
+            className={styles.imageTile}
+            onMouseDown={e => this.handleOnMouseDown(e)}
+            onClick={e => this.handleOnClick(e)}
+          >
             <img src={image} alt={title} />
             <h3>{title}</h3>
           </div>
